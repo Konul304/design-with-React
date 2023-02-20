@@ -2,15 +2,18 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from './page.module.css'
 import SideMenu from '@/pages/api/sideMenu'
-import 'bootstrap/dist/css/bootstrap.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from '@/pages/api/Navbar';
+// import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const inter = Inter({ subsets: ['latin'] })
-
+// className={styles.main}
 export default function Home() {
   return (
     <>
-      <main className={styles.main}>
-        <SideMenu />
+      <main>
+          <SideMenu />
+          <Navbar/>
       </main>
     </>
   )
