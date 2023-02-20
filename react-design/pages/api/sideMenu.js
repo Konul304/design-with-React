@@ -11,7 +11,6 @@ import { faSquarePollVertical } from '@fortawesome/free-solid-svg-icons'
 import { faIdBadge } from "@fortawesome/free-solid-svg-icons"
 import { faChartSimple } from "@fortawesome/free-solid-svg-icons"
 import { faFileContract } from "@fortawesome/free-solid-svg-icons"
-import Navbar from "./Navbar"
 
 
 export default function SideMenu() {
