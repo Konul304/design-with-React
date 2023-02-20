@@ -1,4 +1,4 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -6,35 +6,49 @@
 	text-decoration: none;
 	font-family: arial;
 }
-body{
-	background: #f3f5f9;
+
+body {
+	background: rgb(248, 243, 243);
+
 }
-.wrapper{
+
+.wrapper {
 	position: relative;
 }
-.sidebar{
+
+.sidebar {
 	position: fixed;
-    top: 0;
-    left: 0;
+	top: 0;
+	left: 0;
 	width: 260px;
 	height: 100%;
-	background: silver;
+	background-color: white;
 	padding: 20px 0;
-
+	padding-right: 10px;
 }
 
-ul{
-	padding-bottom: 20px; 
+ul {
+	padding-bottom: 20px;
 }
 
- .sidebar ul li{
-	padding: 15px;	
+.sidebar ul li {
+	padding: 15px;
+	border-radius: 10px;
 }
-
 
 .sidebar ul li:hover{
-	background: #000;
+	background-color:#233B82;
+	color: white;
 }
-.sidebar ul li a:hover{
+.sidebar ul li a:hover {
 	text-decoration: none;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+#card{
+	background-color: #233B82;
+	color: white;
 }
