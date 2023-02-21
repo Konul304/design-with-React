@@ -17,7 +17,7 @@ export default function Navbar() {
             <div>
                 <nav className="navbar d-flex">
                     <h5 className='ps-4'><b>Müştəri</b></h5>
-                    <div  className='d-flex'>
+                    <div className='d-flex'>
                         <button className='btn'>
                             <Image className="mt-2 mb-3"
                                 src={notification}
