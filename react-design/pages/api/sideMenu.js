@@ -24,10 +24,10 @@ export default function SideMenu() {
             width="146px"
             height="32px"
           />
-          <li className="noLink">
+          <a href="#"><li className="noLink">
             <FontAwesomeIcon icon={faSquarePollVertical} className="me-2" />
             <span >Ana səhifə </span>
-          </li>
+          </li></a>
           <li className="Item">
             <a
               className="collapsed"
@@ -91,7 +91,7 @@ export default function SideMenu() {
               </ul>
             </div>
           </li>
-          <li className="noLink">Problemli məhsullar</li>
+         <a href="#"><li className="noLink">Problemli məhsullar</li></a> 
         </ul>
         <div id="card" className="card ms-2 rounded-4">
           <div className="card-body">

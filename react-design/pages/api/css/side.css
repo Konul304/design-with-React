@@ -63,8 +63,12 @@ ul {
 	background-color: #233B82;
 }
 
-.collapse{
-	padding: 15px 0px;
+.collapse li{
+	padding: 15px 0px 0px 0px;
+}
+
+.collapse ul{
+	padding-bottom: 0;
 }
 
 .collapse li{
