@@ -80,3 +80,7 @@ ul {
 	color: white;
 	margin-top: 40%;
 }
+
+#card .btn{
+	width: 100%;
+}

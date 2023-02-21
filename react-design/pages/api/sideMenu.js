@@ -43,7 +43,9 @@ export default function SideMenu() {
             </a>
             <div className="collapse" id="collapseExample1">
               <ul>
-                <li><a href="#">Reqresslər</a></li>
+                <li><a href="#">
+                  Reqresslər
+                </a></li>
                 <li><a href="#">Sazişlər</a></li>
                 <li><a href="#">Faktorinq müqaviləsi</a></li>
               </ul>
@@ -91,7 +93,7 @@ export default function SideMenu() {
               </ul>
             </div>
           </li>
-         <a href="#"><li className="noLink">Problemli məhsullar</li></a> 
+          <a href="#"><li className="noLink">Problemli məhsullar</li></a>
         </ul>
         <div id="card" className="card ms-2 rounded-4">
           <div className="card-body">
@@ -101,9 +103,9 @@ export default function SideMenu() {
               width="34px"
               height="34px"
             />
-            <h5 className="card-title fs-5">Qısayol yarat</h5>
-            <p className="card-text fs-6">Vacib sənədlərə sürətli keçid.</p>
-            <a href="#" className="btn btn-light">Sənəd əlavə et</a>
+            <h5 className="card-title">Qısayol yarat</h5>
+            <p className="card-text">Vacib sənədlərə sürətli keçid.</p>
+            <button href="#" className="btn btn-light">Sənəd əlavə et</button>
           </div>
         </div>
       </div>

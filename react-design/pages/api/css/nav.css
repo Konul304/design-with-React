@@ -6,3 +6,11 @@ nav{
     overflow: hidden;
 }
 
+nav .btn{
+    padding: 0;
+    margin-right: 1rem;
+}
+
+.profile{
+    margin-left: 6rem;
+}
