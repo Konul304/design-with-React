@@ -1,4 +1,4 @@
-import "./side.css"
+import "./css/side.css"
 import Image from 'next/image'
 import Logo from "../../public/Logo1.svg"
 import CardIcon from "../../public/CardIcon.svg"
