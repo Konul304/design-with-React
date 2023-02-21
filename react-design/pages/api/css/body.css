@@ -1,1 +1,18 @@
-body{}
+.mainContainer{
+    background-color: #F5F6F8;
+    width: 82%;
+    margin-left: 18%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.input-group{
+    width: 60%;
+}
+
+.group2{
+    width: 35%;
+}

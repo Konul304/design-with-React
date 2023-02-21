@@ -1,5 +1,4 @@
 import "./css/nav.css"
-
 import Image from 'next/image'
 import notification from '../../public/notification.svg'
 import calendar from "../../public/calendar.svg"
@@ -10,6 +9,7 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
+
 
 export default function Navbar() {
     return (
@@ -50,7 +50,7 @@ export default function Navbar() {
                                 width="34px"
                                 height="34px"
                             />
-                            <FontAwesomeIcon icon={faCaretDown} className="ms-4" />
+                            <button className="btn"><FontAwesomeIcon icon={faCaretDown} className="ms-4" /></button>
                         </div>
                     </div>
 
