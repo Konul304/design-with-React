@@ -38,9 +38,6 @@ export default function Body() {
                         </button>
                     </div>
                 </div>
-
-
-
             </div>
         </>
     )

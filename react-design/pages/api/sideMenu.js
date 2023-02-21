@@ -1,7 +1,7 @@
 import "./css/side.css"
 import Image from 'next/image'
-import Logo from "../../public/Logo1.svg"
-import CardIcon from "../../public/CardIcon.svg"
+import Logo from "../../public/images/Logo1.svg"
+import CardIcon from "../../public/images/CardIcon.svg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'

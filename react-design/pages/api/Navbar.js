@@ -1,9 +1,9 @@
 import "./css/nav.css"
 import Image from 'next/image'
-import notification from '../../public/notification.svg'
-import calendar from "../../public/calendar.svg"
-import messages from "../../public/mssgs.svg"
-import profile from "../../public/profile.svg"
+import notification from "../../public/images/notification.svg"
+import calendar from "../../public/images/calendar.svg"
+import messages from "../../public/images/mssgs.svg"
+import profile from "../../public/images/profile.svg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
