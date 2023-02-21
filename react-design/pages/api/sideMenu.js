@@ -24,86 +24,74 @@ export default function SideMenu() {
               width="146px"
               height="32px"
             />
-            <li>
+            <li className="Item">
               <FontAwesomeIcon icon={faSquarePollVertical} className="me-2" />
               <span>Ana səhifə </span>
             </li>
-            <li>
-              <p>
+            <li className="Item">
                 <a
                   className="collapsed"
                   data-bs-toggle="collapse"
-                  href="#collapseExample"
+                  href="#collapseExample1"
                   role="button"
                   aria-expanded="false"
-                  aria-controls="collapseExample"
+                  aria-controls="collapseExample1"
                 >
                   <span>
                     <FontAwesomeIcon icon={faFileContract} className="me-2" />
                     Müqavilələr<FontAwesomeIcon icon={faCaretDown} className="ms-4" /></span>
                 </a>
-              </p>
-              <div className="collapse" id="collapseExample">
-                <div className="card card-body">
+              <div className="collapse" id="collapseExample1">
                   <ul>
-                    <li>Reqresslər</li>
-                    <li>Sazişlər</li>
-                    <li>Faktorinq müqaviləsi</li>
+                    <li><a href="#">Reqresslər</a></li>
+                    <li><a href="#">Sazişlər</a></li>
+                    <li><a href="#">Faktorinq müqaviləsi</a></li>
                   </ul>
-                </div>
               </div>
             </li>
-            <li>
-              <p>
+            <li className="Item">
                 <a
                   className="collapsed"
                   data-bs-toggle="collapse"
-                  href="#collapseExample"
+                  href="#collapseExample2"
                   role="button"
                   aria-expanded="false"
-                  aria-controls="collapseExample"
+                  aria-controls="collapseExample2"
                 >
                   <span>
                     <FontAwesomeIcon icon={faIdBadge} className="me-2" />
                     Zaminli Portfel <FontAwesomeIcon icon={faCaretDown} className="ms-4" /></span>
                 </a>
-              </p>
-              <div className="collapse" id="collapseExample">
-                <div className="card card-body">
+              <div className="collapse" id="collapseExample2">
                   <ul>
-                    <li>Reqresslər</li>
-                    <li>Sazişlər</li>
-                    <li>Faktorinq müqaviləsi</li>
+                  <li><a href="#">Reqresslər</a></li>
+                    <li><a href="#">Sazişlər</a></li>
+                    <li><a href="#">Faktorinq müqaviləsi</a></li>
                   </ul>
-                </div>
               </div>
             </li>
-            <li>
-              <p>
+            <li className="Item">
                 <a
                   className="collapsed"
                   data-bs-toggle="collapse"
-                  href="#collapseExample"
+                  href="#collapseExample3"
                   role="button"
                   aria-expanded="false"
-                  aria-controls="collapseExample"
+                  aria-controls="collapseExample3"
                 >
                   <span>
                     <FontAwesomeIcon icon={faChartSimple} className="me-2" />
                     Hesabatlar <FontAwesomeIcon icon={faCaretDown} className="ms-4" /></span>
                 </a>
-              </p>
-              <div className="collapse" id="collapseExample">
-                <div className="card card-body">
-                  <ul>
-                    <li>Reqresslər</li>
-                    <li>Sazişlər</li>
-                    <li>Faktorinq müqaviləsi</li>
+              <div className="collapse" id="collapseExample3">
+                  <ul >
+                  <li><a href="#">Reqresslər</a></li>
+                    <li><a href="#">Sazişlər</a></li>
+                    <li><a href="#">Faktorinq müqaviləsi</a></li>
                   </ul>
-                </div>
               </div>
             </li>
-            <li>Problemli məhsullar</li>
+            <li className="Item">Problemli məhsullar</li>
           </ul>
           <div id="card" className="card ms-2 mt-5 rounded-4">
             <div className="card-body">

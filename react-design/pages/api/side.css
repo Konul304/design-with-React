@@ -7,11 +7,6 @@
 	font-family: arial;
 }
 
-body {
-	background: rgb(248, 243, 243);
-
-}
-
 .wrapper {
 	position: relative;
 }
@@ -31,27 +26,33 @@ ul {
 	padding-bottom: 20px;
 }
 
-.sidebar ul li {
+.Item {
 	padding: 15px;
 	border-radius: 10px;
 }
 
-.sidebar ul li:hover{
+.Item:hover{
 	background-color:#233B82;
 	color: white;
 }
-.sidebar ul li a:hover {
-	text-decoration: none;
-}
 
-a{
+.Item a{
 	text-decoration: none;
 	color: black;
 }
 
-a:hover{
+.Item a:hover{
 	color: white;
 }
+
+.collapse{
+	padding: 15px 0px;
+}
+
+.collapse li{
+	list-style-type: circle;
+}
+
 #card{
 	background-color: #233B82;
 	color: white;
