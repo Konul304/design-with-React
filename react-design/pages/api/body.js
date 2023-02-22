@@ -7,20 +7,38 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faCalendar } from "@fortawesome/free-solid-svg-icons"
 import { useState, useEffect } from 'react'
 import axios from "axios";
+import { get } from "jquery"
 
 
 export default function Body() {
     const [getArray, setArray] = useState()
-        useEffect(() => {
-            axios({
-                method: "GET",
-                baseURL: "https://63f46dec3f99f5855daf40a5.mockapi.io/api/pk/pkdatas"
-            })
+    const [inputValue,setInputValue]=useState();
+    useEffect(() => {
+        axios({
+            method: "GET",
+            baseURL: "https://63f46dec3f99f5855daf40a5.mockapi.io/api/pk/pkdatas"
+        })
             .then((res) => {
-                console.log(res.data);
                 setArray(res.data);
             })
-        }, [])
+    }, [])
+
+    const handleChange = (e) => {
+        setInputValue(e.target.value)
+        console.log(inputValue)
+    }
+
+    const handleKeypress = e => {
+        if (e.code === "Enter") {
+            handleSearchByNumber();
+        }
+    }
+
+    const handleSearchByNumber = () => {
+        setArray(getArray.filter((item) => item.id == inputValue))
+        console.log(getArray)
+    }
+
     return (
         <>
             <div className="mainContainer mt-2 d-flex justify-content-between pe-3">
@@ -31,17 +49,20 @@ export default function Body() {
                         <li className="breadcrumb-item">Müştəri</li>
                     </ol>
                 </div>
-
                 <div className="d-flex justify-content-between">
                     <div className="input-group">
-                        <button className="btn btn-outline-secondary" type="button" id="button-addon1">
+                        <button
+                            className="btn btn-outline-secondary"
+                            type="button" id="button-addon1">
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </button>
-                        <input type="text" className="form-control"
+                        <input id="input"
+                            onChange={handleChange}
+                            onKeyPress={handleKeypress}
+                            type="text" className="form-control"
                             placeholder="Sənəd nömrəsi və ya partnyor adı"
                         />
                     </div>
-
                     <div className="input-group  group2">
                         <input type="text" className="form-control"
                             placeholder="Tarix üzrə axtar"
@@ -67,23 +88,21 @@ export default function Body() {
                             <th scope="col">Status</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="table">
                         {
-                            // console.log(getArray)
                             getArray && getArray.map((val, key) => {
                                 return <tr>
-                                <td>{val.id}</td>
-                                <td>{val.no}</td>
-                                <td>{val.createdAt}</td>
-                                <td>{val.cost}</td>
-                                <td>{val.quantity}</td>
-                                <td>mdo</td>
-                                <td>{val.reason}</td>
-                                <td>{val.status}</td>
-                            </tr>
+                                    <td>{val.id}</td>
+                                    <td>{val.no}</td>
+                                    <td>{val.createdAt}</td>
+                                    <td>{val.cost}</td>
+                                    <td>{val.quantity}</td>
+                                    <td>E-imza</td>
+                                    <td>{val.reason}</td>
+                                    <td>{val.status}</td>
+                                </tr>
                             })
                         }
-                        
                     </tbody>
                 </table>
             </div>
