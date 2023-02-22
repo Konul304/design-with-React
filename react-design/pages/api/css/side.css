@@ -25,10 +25,14 @@ html{
 	padding: 20px 0;
 	padding-right: 10px;
 	border-right: 3px solid #F5F6F8; 
-	overflow: scroll;
 }
 
-.sidebar::-webkit-scrollbar {
+.menu{
+	overflow: scroll;
+	box-sizing: border-box;
+}
+
+.menu::-webkit-scrollbar {
     display: none;
 }
 
@@ -78,7 +82,11 @@ ul {
 #card{
 	background-color: #233B82;
 	color: white;
-	margin-top: 40%;
+	/* margin-top: 40%; */
+	position: fixed;
+	bottom: 10px;
+	left: 5px;
+
 }
 
 #card .btn{

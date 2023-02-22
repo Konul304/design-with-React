@@ -6,18 +6,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
-import { faSquarePollVertical } from '@fortawesome/free-solid-svg-icons'
-import { faIdBadge } from "@fortawesome/free-solid-svg-icons"
-import { faChartSimple } from "@fortawesome/free-solid-svg-icons"
-import { faFileContract } from "@fortawesome/free-solid-svg-icons"
-
+import { faCaretDown, faSquarePollVertical, faIdBadge, faChartSimple, faFileContract } from '@fortawesome/free-solid-svg-icons'
 
 export default function SideMenu() {
   return (
     <>
       <div className="sidebar">
-        <ul>
+        <ul className="menu">
           <Image className="ms-1 mt-2 mb-5"
             src={Logo}
             alt="Picture of the author"

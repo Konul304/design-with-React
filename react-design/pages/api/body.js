@@ -5,19 +5,22 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faCalendar } from "@fortawesome/free-solid-svg-icons"
-import { data } from "jquery"
+import { useState, useEffect } from 'react'
+import axios from "axios";
+
 
 export default function Body() {
-    const arr = []
-    fetch('https://63f46dec3f99f5855daf40a5.mockapi.io/api/pk/pkdatas')
-        .then((response) => response.json())
-        .then((data) =>
-            data.forEach(item => {
-                arr.push(item);
+    const [getArray, setArray] = useState()
+        useEffect(() => {
+            axios({
+                method: "GET",
+                baseURL: "https://63f46dec3f99f5855daf40a5.mockapi.io/api/pk/pkdatas"
             })
-        )
-    console.log(arr)
-    console.log(arr[1])
+            .then((res) => {
+                console.log(res.data);
+                setArray(res.data);
+            })
+        }, [])
     return (
         <>
             <div className="mainContainer mt-2 d-flex justify-content-between pe-3">
@@ -65,36 +68,22 @@ export default function Body() {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
-                            <td>mdo</td>
-                            <td>mdo</td>
-                            <td>mdo</td>
-                            <td>do</td>
-                            <td>mdo</td>
-                        </tr>
-                        <tr>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>fat</td>
-                            <td>fat</td>
-                            <td>fat</td>
-                            <td>fat</td>
-                            <td>fat</td>
-                            <td>fat</td>
-                        </tr>
-                        <tr>
-                            <td >Larry the Bird</td>
-                            <td >Larry the Bird</td>
-                            <td>twitter</td>
-                            <td>twitter</td>
-                            <td>twitter</td>
-                            <td>twitter</td>
-                            <td>twitter</td>
-                            <td>twitter</td>
-                        </tr>
+                        {
+                            // console.log(getArray)
+                            getArray && getArray.map((val, key) => {
+                                return <tr>
+                                <td>{val.id}</td>
+                                <td>{val.no}</td>
+                                <td>{val.createdAt}</td>
+                                <td>{val.cost}</td>
+                                <td>{val.quantity}</td>
+                                <td>mdo</td>
+                                <td>{val.reason}</td>
+                                <td>{val.status}</td>
+                            </tr>
+                            })
+                        }
+                        
                     </tbody>
                 </table>
             </div>
