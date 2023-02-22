@@ -3,11 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-import { faCalendar } from "@fortawesome/free-solid-svg-icons"
+import { faMagnifyingGlass,faCalendar } from '@fortawesome/free-solid-svg-icons'
 import { useState, useEffect } from 'react'
 import axios from "axios";
-import { get } from "jquery"
 
 
 export default function Body() {
@@ -41,7 +39,7 @@ export default function Body() {
 
     return (
         <>
-            <div className="mainContainer mt-2 d-flex justify-content-between pe-3">
+            <div className="mainContainer pt-4 pb-4 d-flex justify-content-between pe-3">
                 <div aria-label="breadcrumb" className="me-5 ms-3">
                     <ol className="breadcrumb">
                         <li className="breadcrumb-item active" aria-current="page"><a href="#">Müqavilələr</a></li>
@@ -74,10 +72,10 @@ export default function Body() {
                     </div>
                 </div>
             </div>
-            <div className="dataTable">
+            <div className="dataTable pb-5">
                 <table className="table">
                     <thead>
-                        <tr>
+                        <tr >
                             <th scope="col">N.A.S NO:</th>
                             <th scope="col">Reqress NO</th>
                             <th scope="col">Tarix</th>

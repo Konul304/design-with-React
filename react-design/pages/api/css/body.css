@@ -17,7 +17,8 @@ a {
     width: 35%;
 }
 
-.table{
-    width: 82%;
-    margin-left: 19%;
+.dataTable{
+    width: 80%;
+    padding: 0;
+    margin-left: 20%;
 }
