@@ -82,7 +82,7 @@ export default function SideMenu() {
             </a>
             <div className="collapse" id="collapseExample3">
               <ul >
-                <li><a href="#">Hesabatlar</a></li>
+                <li><a href="#">Hesabat</a></li>
               </ul>
             </div>
           </li>
