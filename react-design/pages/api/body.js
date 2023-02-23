@@ -6,7 +6,9 @@ config.autoAddCss = false
 import { faMagnifyingGlass, faCalendar } from '@fortawesome/free-solid-svg-icons'
 import { useState, useEffect } from 'react'
 import axios from "axios";
-import { get } from "jquery"
+import moment from 'moment';
+moment().format();
+
 
 
 export default function Body() {
@@ -80,7 +82,7 @@ export default function Body() {
                     </div>
                 </div>
             </div>
-            <div className="table2"><div className="tableContent">
+            <div className="tableContent">
                 <table className="table">
                     <thead className="cell-padding-left-2">
                         <tr>
@@ -107,7 +109,7 @@ export default function Body() {
                                 <tr>
                                     <td className="cell-padding cell-padding-left-2">{val.id}</td>
                                     <td className="cell-padding cell-padding-left-2">{val.no}</td>
-                                    <td className="cell-padding cell-padding-left">{val.createdAt}</td>
+                                    <td className="cell-padding cell-padding-left">{moment(val.createdAt).format('DD.MM.YY')}</td>
                                     <td className="cell-padding cell-padding-left-2">{val.cost}</td>
                                     <td className="cell-padding cell-padding-left-2">{val.quantity}</td>
                                     <td className="cell-padding cell-padding-left">E-imza</td>
@@ -130,8 +132,7 @@ export default function Body() {
                         }
                     </tbody>
                 </table>
-            </div></div>
-            
+            </div>
         </>
     )
 }
