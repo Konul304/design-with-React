@@ -9,8 +9,13 @@ a {
     color: black;
 }
 
-.breadcrumb a, .breadcrumb li{
-    color:gray;
+.breadcrumb {
+    margin-left: 1.5rem;
+}
+
+.breadcrumb a,
+.breadcrumb li {
+    color: gray;
 }
 
 .input-group {
@@ -21,22 +26,40 @@ a {
     width: 35%;
 }
 
-.tableContent{
+.tableContent {
     background-color: #F5F6F8;
 }
 
-.table{
-    width: 80%;
+.table {
+    width: 79%;
     margin-left: 20%;
     border-radius: 10px;
     background-color: white;
 }
 
-thead{
-    background-color: aliceblue;
-    border-radius: 10px;
+.table .cell-padding {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
-.header{
+.table .cell-padding-right {
+    padding-right: 1rem;
+}
+
+.table .cell-padding-left {
+    padding-left: 1rem;
+}
+
+.table .cell-padding-left-2 {
+    padding-left: 2rem;
+}
+
+thead {
+    background-color: #c2c1c157;
+    border-radius: 10px;
+    color: gray;
+}
+
+.header {
     padding: 15px;
 }

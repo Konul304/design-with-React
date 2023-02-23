@@ -13,7 +13,7 @@ export default function SideMenu() {
     <>
       <div className="sidebar">
         <ul className="menu">
-          <Image className="ms-3 mt-2 mb-5"
+          <Image className="ms-3 mt-2 logo"
             src={Logo}
             alt="Picture of the author"
             width="146px"

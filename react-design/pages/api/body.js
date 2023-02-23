@@ -80,18 +80,18 @@ export default function Body() {
                     </div>
                 </div>
             </div>
-            <div className="tableContent">
+            <div className="table2"><div className="tableContent">
                 <table className="table">
-                    <thead className="header">
-                        <tr >
-                            <th scope="col">N.A.S NO:</th>
-                            <th scope="col">Reqress NO</th>
-                            <th scope="col">Tarix</th>
-                            <th scope="col">Ümumi məbləğ</th>
-                            <th scope="col">Miqdar</th>
-                            <th scope="col">E-imza</th>
-                            <th scope="col">Səbəb</th>
-                            <th scope="col">Status</th>
+                    <thead className="cell-padding-left-2">
+                        <tr>
+                            <th className=" cell-padding cell-padding-left" scope="col">N.A.S NO:</th>
+                            <th className=" cell-padding cell-padding-left" scope="col">Reqress NO</th>
+                            <th className=" cell-padding cell-padding-left" scope="col">Tarix</th>
+                            <th className=" cell-padding cell-padding-left" scope="col">Ümumi məbləğ</th>
+                            <th className=" cell-padding cell-padding-left" scope="col">Miqdar</th>
+                            <th className=" cell-padding cell-padding-left" scope="col">E-imza</th>
+                            <th className=" cell-padding cell-padding-left" scope="col">Səbəb</th>
+                            <th className=" cell-padding cell-padding-left" scope="col">Status</th>
                         </tr>
                     </thead>
                     <tbody id="table">
@@ -105,14 +105,14 @@ export default function Body() {
                                 //       :val.createdAt.includes(inputValue2)   
                             }).map((val) => (
                                 <tr>
-                                    <td>{val.id}</td>
-                                    <td>{val.no}</td>
-                                    <td>{val.createdAt}</td>
-                                    <td>{val.cost}</td>
-                                    <td>{val.quantity}</td>
-                                    <td>E-imza</td>
-                                    <td>{val.reason}</td>
-                                    <td>{val.status}</td>
+                                    <td className="cell-padding cell-padding-left-2">{val.id}</td>
+                                    <td className="cell-padding cell-padding-left-2">{val.no}</td>
+                                    <td className="cell-padding cell-padding-left">{val.createdAt}</td>
+                                    <td className="cell-padding cell-padding-left-2">{val.cost}</td>
+                                    <td className="cell-padding cell-padding-left-2">{val.quantity}</td>
+                                    <td className="cell-padding cell-padding-left">E-imza</td>
+                                    <td className="cell-padding cell-padding-left">{val.reason}</td>
+                                    <td className="cell-padding cell-padding-left">{val.status}</td>
                                 </tr>
                             ))
                             // getArray && getArray.map((val, key) => (
@@ -130,7 +130,8 @@ export default function Body() {
                         }
                     </tbody>
                 </table>
-            </div>
+            </div></div>
+            
         </>
     )
 }
