@@ -42,10 +42,6 @@ export default function Body() {
     //     }
     // }
 
-    // const handleSearchByNumber = () => {
-    //     getArray.filter((item) => item.id == inputValue)
-    // }
-
     return (
         <>
             <div className="mainContainer pt-4 pb-4 d-flex justify-content-between pe-3">
@@ -117,18 +113,6 @@ export default function Body() {
                                     <td className="cell-padding cell-padding-left">{val.status}</td>
                                 </tr>
                             ))
-                            // getArray && getArray.map((val, key) => (
-                            //     <tr>
-                            //         <td>{val.id}</td>
-                            //         <td>{val.no}</td>
-                            //         <td>{val.createdAt}</td>
-                            //         <td>{val.cost}</td>
-                            //         <td>{val.quantity}</td>
-                            //         <td>E-imza</td>
-                            //         <td>{val.reason}</td>
-                            //         <td>{val.status}</td>
-                            //     </tr>
-                            // ))
                         }
                     </tbody>
                 </table>
