@@ -1,4 +1,5 @@
 "use client";
+import "../pages/api/css/main.css"
 import { Inter } from '@next/font/google'
 import SideMenu from '@/pages/api/sideMenu'
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -16,11 +17,11 @@ export default function Home() {
   }, []);
   return (
     <>
-      <main >
+      <div className="main">
           <Navbar/>
           <SideMenu />
           <Body/>
-      </main>
+      </div>
     </>
   )
 }

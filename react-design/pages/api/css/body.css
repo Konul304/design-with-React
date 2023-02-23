@@ -9,6 +9,10 @@ a {
     color: black;
 }
 
+.breadcrumb a, .breadcrumb li{
+    color:gray;
+}
+
 .input-group {
     width: 60%;
 }
@@ -17,8 +21,22 @@ a {
     width: 35%;
 }
 
-.dataTable{
+.tableContent{
+    background-color: #F5F6F8;
+}
+
+.table{
     width: 80%;
-    padding: 0;
     margin-left: 20%;
+    border-radius: 10px;
+    background-color: white;
+}
+
+thead{
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.header{
+    padding: 15px;
 }

@@ -13,14 +13,14 @@ export default function SideMenu() {
     <>
       <div className="sidebar">
         <ul className="menu">
-          <Image className="ms-1 mt-2 mb-5"
+          <Image className="ms-3 mt-2 mb-5"
             src={Logo}
             alt="Picture of the author"
             width="146px"
             height="32px"
           />
           <a href="#"><li className="noLink">
-            <FontAwesomeIcon icon={faSquarePollVertical} className="me-2" />
+            <FontAwesomeIcon icon={faSquarePollVertical} className="me-3" />
             <span >Ana səhifə </span>
           </li></a>
           <li className="Item">
@@ -33,8 +33,8 @@ export default function SideMenu() {
               aria-controls="collapseExample1"
             >
               <span>
-                <FontAwesomeIcon icon={faFileContract} className="me-2" />
-                Müqavilələr<FontAwesomeIcon icon={faCaretDown} className="ms-4" /></span>
+                <FontAwesomeIcon icon={faFileContract} className="me-3" />
+                Müqavilələr<FontAwesomeIcon icon={faCaretDown} className="down" /></span>
             </a>
             <div className="collapse" id="collapseExample1">
               <ul>
@@ -56,8 +56,8 @@ export default function SideMenu() {
               aria-controls="collapseExample2"
             >
               <span>
-                <FontAwesomeIcon icon={faIdBadge} className="me-2" />
-                Zaminli Portfel <FontAwesomeIcon icon={faCaretDown} className="ms-4" /></span>
+                <FontAwesomeIcon icon={faIdBadge} className="me-3" />
+                Zaminli Portfel <FontAwesomeIcon icon={faCaretDown} className="down2" /></span>
             </a>
             <div className="collapse" id="collapseExample2">
               <ul>
@@ -77,14 +77,12 @@ export default function SideMenu() {
               aria-controls="collapseExample3"
             >
               <span>
-                <FontAwesomeIcon icon={faChartSimple} className="me-2" />
-                Hesabatlar <FontAwesomeIcon icon={faCaretDown} className="ms-4" /></span>
+                <FontAwesomeIcon icon={faChartSimple} className="me-3" />
+                Hesabatlar <FontAwesomeIcon icon={faCaretDown} className="down3" /></span>
             </a>
             <div className="collapse" id="collapseExample3">
               <ul >
-                <li><a href="#">Reqresslər</a></li>
-                <li><a href="#">Sazişlər</a></li>
-                <li><a href="#">Faktorinq müqaviləsi</a></li>
+                <li><a href="#">Hesabatlar</a></li>
               </ul>
             </div>
           </li>

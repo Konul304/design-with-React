@@ -3,14 +3,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
-import { faMagnifyingGlass,faCalendar } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass, faCalendar } from '@fortawesome/free-solid-svg-icons'
 import { useState, useEffect } from 'react'
 import axios from "axios";
+import { get } from "jquery"
 
 
 export default function Body() {
     const [getArray, setArray] = useState()
-    const [inputValue,setInputValue]=useState();
+    const [inputValue, setInputValue] = useState();
+    const [inputValue2, setInputValue2] = useState()
+
     useEffect(() => {
         axios({
             method: "GET",
@@ -21,21 +24,25 @@ export default function Body() {
             })
     }, [])
 
+    console.log(getArray)
+
     const handleChange = (e) => {
         setInputValue(e.target.value)
-        console.log(inputValue)
     }
 
-    const handleKeypress = e => {
-        if (e.code === "Enter") {
-            handleSearchByNumber();
-        }
+    const handleChange2 = (e) => {
+        setInputValue2(e.target.value)
     }
 
-    const handleSearchByNumber = () => {
-        setArray(getArray.filter((item) => item.id == inputValue))
-        console.log(getArray)
-    }
+    // const handleKeypress = e => {
+    //     if (e.code === "Enter") {
+    //         handleSearchByNumber();
+    //     }
+    // }
+
+    // const handleSearchByNumber = () => {
+    //     getArray.filter((item) => item.id == inputValue)
+    // }
 
     return (
         <>
@@ -56,13 +63,14 @@ export default function Body() {
                         </button>
                         <input id="input"
                             onChange={handleChange}
-                            onKeyPress={handleKeypress}
+                            // onKeyPress={handleKeypress}
                             type="text" className="form-control"
                             placeholder="Sənəd nömrəsi və ya partnyor adı"
                         />
                     </div>
                     <div className="input-group  group2">
                         <input type="text" className="form-control"
+                            onChange={handleChange2}
                             placeholder="Tarix üzrə axtar"
                             aria-label="Recipient's username"
                             aria-describedby="button-addon2" />
@@ -72,9 +80,9 @@ export default function Body() {
                     </div>
                 </div>
             </div>
-            <div className="dataTable pb-5">
+            <div className="tableContent">
                 <table className="table">
-                    <thead>
+                    <thead className="header">
                         <tr >
                             <th scope="col">N.A.S NO:</th>
                             <th scope="col">Reqress NO</th>
@@ -88,8 +96,15 @@ export default function Body() {
                     </thead>
                     <tbody id="table">
                         {
-                            getArray && getArray.map((val, key) => {
-                                return <tr>
+                            getArray.filter((val) => {
+                                return inputValue && inputValue2 === ''
+                                    ? val
+                                    : (val.createdAt.includes(inputValue2) || val.id.includes(inputValue))
+                                //    return   inputValue2 === ''
+                                //       ? val
+                                //       :val.createdAt.includes(inputValue2)   
+                            }).map((val) => (
+                                <tr>
                                     <td>{val.id}</td>
                                     <td>{val.no}</td>
                                     <td>{val.createdAt}</td>
@@ -99,7 +114,19 @@ export default function Body() {
                                     <td>{val.reason}</td>
                                     <td>{val.status}</td>
                                 </tr>
-                            })
+                            ))
+                            // getArray && getArray.map((val, key) => (
+                            //     <tr>
+                            //         <td>{val.id}</td>
+                            //         <td>{val.no}</td>
+                            //         <td>{val.createdAt}</td>
+                            //         <td>{val.cost}</td>
+                            //         <td>{val.quantity}</td>
+                            //         <td>E-imza</td>
+                            //         <td>{val.reason}</td>
+                            //         <td>{val.status}</td>
+                            //     </tr>
+                            // ))
                         }
                     </tbody>
                 </table>

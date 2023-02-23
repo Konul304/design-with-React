@@ -30,14 +30,11 @@ html{
 .menu{
 	overflow: scroll;
 	box-sizing: border-box;
+	padding-left: 10px;
 }
 
 .menu::-webkit-scrollbar {
     display: none;
-}
-
-ul {
-	padding-bottom: 20px;
 }
 
 .Item {
@@ -45,11 +42,26 @@ ul {
 	border-radius: 10px;
 }
 
+
 .Item a{
 	text-decoration: none;
 	color: black;
 	padding: 15px;
 	border-radius: 10px;
+}
+
+.down{
+	margin-left: 40%;
+}
+
+.down2{
+	margin-left: 30%;
+
+}
+
+.down3{
+	margin-left: 39%;
+
 }
 
 .Item a:hover{
@@ -86,7 +98,6 @@ ul {
 	position: fixed;
 	bottom: 10px;
 	left: 5px;
-
 }
 
 #card .btn{
