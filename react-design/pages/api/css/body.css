@@ -56,7 +56,7 @@ a {
 }
 
 thead {
-    background-color: #c2c1c157;
+    background-color: #d1d0d057;
     border-radius: 10px;
     color: gray;
 }
@@ -67,4 +67,12 @@ thead {
 
 body{
     background-color: #eeeef0;
+}
+
+.alert{
+    margin-bottom: 0;
+}
+
+.table>:not(caption)>*>*{
+    padding-right: 3rem;
 }

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
-import { faMagnifyingGlass, faCalendar } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass, faCalendar, faKey } from '@fortawesome/free-solid-svg-icons'
 import { useState, useEffect, Suspense } from 'react'
 import axios from "axios";
 import moment from 'moment';
@@ -110,9 +110,9 @@ export default function Body() {
                                     <td className="cell-padding cell-padding-left">{moment(val.createdAt).format('DD.MM.YY')}</td>
                                     <td className="cell-padding cell-padding-left-2">{val.cost}</td>
                                     <td className="cell-padding cell-padding-left-2">{val.quantity}</td>
-                                    <td className="cell-padding cell-padding-left">E-imza</td>
-                                    <td className="cell-padding cell-padding-left">{val.reason}</td>
-                                    <td className="cell-padding cell-padding-left">{val.status}</td>
+                                    <td className="cell-padding cell-padding-left"><div className="alert alert-info"><FontAwesomeIcon icon={faKey} /></div></td>
+                                    <td className="cell-padding cell-padding-left"><div className="alert alert-warning">{val.reason}</div></td>
+                                    <td className="cell-padding cell-padding-left"><div className="alert alert-success">{val.status}</div></td>
                                 </tr>
                             ))
                         }
