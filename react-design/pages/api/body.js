@@ -11,8 +11,8 @@ moment().format();
 
 export default function Body() {
     const [getArray, setArray] = useState([])
-    const [inputValue, setInputValue] = useState();
-    const [inputValue2, setInputValue2] = useState()
+    const [inputValue, setInputValue] = useState('');
+    const [inputValue2, setInputValue2] = useState('')
 
     useEffect(() => {
         axios({
@@ -24,21 +24,30 @@ export default function Body() {
             })
     }, [])
 
-    console.log(getArray)
-
     const handleChange = (e) => {
+
         setInputValue(e.target.value)
     }
 
     const handleChange2 = (e) => {
         setInputValue2(e.target.value)
     }
-
     // const handleKeypress = e => {
     //     if (e.code === "Enter") {
     //         handleSearchByNumber();
     //     }
     // }
+    const select = (val) => {
+        if (!inputValue && !inputValue2) {
+            return true;
+        }
+        else if (inputValue) {
+            return val.id.includes(inputValue)
+        }
+        else if (inputValue2) {
+            return  val.createdAt.includes(inputValue2)
+        }
+    }
 
     return (
         <>
@@ -93,10 +102,7 @@ export default function Body() {
                     <tbody>
                         {
                             getArray.filter((val) => {
-                                console.log(val)
-                                return inputValue && inputValue2 !== ''
-                                    ? val.id.includes(inputValue) || val.createdAt.includes(inputValue2)
-                                    : val 
+                                return select(val);
                             }).map((val) => (
                                 <tr>
                                     <td className="cell-padding cell-padding-left-2">{val.id}</td>
