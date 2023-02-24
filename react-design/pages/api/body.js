@@ -4,15 +4,13 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 import { faMagnifyingGlass, faCalendar } from '@fortawesome/free-solid-svg-icons'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import axios from "axios";
 import moment from 'moment';
 moment().format();
 
-
-
 export default function Body() {
-    const [getArray, setArray] = useState()
+    const [getArray, setArray] = useState([])
     const [inputValue, setInputValue] = useState();
     const [inputValue2, setInputValue2] = useState()
 
@@ -59,7 +57,7 @@ export default function Body() {
                             type="button" id="button-addon1">
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </button>
-                        <input 
+                        <input
                             onChange={handleChange}
                             // onKeyPress={handleKeypress}
                             type="text" className="form-control shadow-none"
@@ -79,7 +77,7 @@ export default function Body() {
                 </div>
             </div>
             <div className="tableContent">
-                <table className="table">
+                <table className="table table-hover">
                     <thead className="cell-padding-left-2">
                         <tr>
                             <th className=" cell-padding cell-padding-left" scope="col">N.A.S NO:</th>
@@ -92,15 +90,13 @@ export default function Body() {
                             <th className=" cell-padding cell-padding-left" scope="col">Status</th>
                         </tr>
                     </thead>
-                    <tbody id="table">
+                    <tbody>
                         {
                             getArray.filter((val) => {
-                                return inputValue && inputValue2 === ''
-                                    ? val
-                                    : (val.createdAt.includes(inputValue2) || val.id.includes(inputValue))
-                                //    return   inputValue2 === ''
-                                //       ? val
-                                //       :val.createdAt.includes(inputValue2)   
+                                console.log(val)
+                                return inputValue && inputValue2 !== ''
+                                    ? val.id.includes(inputValue) || val.createdAt.includes(inputValue2)
+                                    : val 
                             }).map((val) => (
                                 <tr>
                                     <td className="cell-padding cell-padding-left-2">{val.id}</td>
