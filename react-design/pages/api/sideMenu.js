@@ -38,9 +38,7 @@ export default function SideMenu() {
             </a>
             <div className="collapse" id="collapseExample1">
               <ul>
-                <li><a href="#">
-                  Reqresslər
-                </a></li>
+                <li><a href="#">Reqresslər</a></li>
                 <li><a href="#">Sazişlər</a></li>
                 <li><a href="#">Faktorinq müqaviləsi</a></li>
               </ul>

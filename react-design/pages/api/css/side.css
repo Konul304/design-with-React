@@ -50,7 +50,7 @@ html{
 .Item a{
 	text-decoration: none;
 	color: black;
-	padding: 15px;
+	padding: 15px ;
 	border-radius: 10px;
 }
 
@@ -84,11 +84,16 @@ html{
 }
 
 .collapse li{
-	padding: 15px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+.collapse a{
+	padding: 10px 0px 10px 10px;
+	display: block;
 }
 
 .collapse ul{
-	padding-bottom: 0;
+	padding-top: 13px;
 }
 
 .collapse li{
