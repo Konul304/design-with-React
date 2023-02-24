@@ -1,6 +1,7 @@
 import "./css/side.css"
 import Image from 'next/image'
 import Logo from "../../public/images/Logo1.svg"
+import bg from "../../public/images/Group1.svg"
 import CardIcon from "../../public/images/CardIcon.svg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { config } from '@fortawesome/fontawesome-svg-core'
@@ -86,7 +87,12 @@ export default function SideMenu() {
           </li>
           <a href="#"><li className="noLink">Problemli məhsullar</li></a>
         </ul>
-        <div id="card" className="card ms-2 rounded-4">
+        <div> <Image className=" bg"
+            src={bg}
+            alt="Picture of the author"
+            width="384px"
+            height="360px"
+          /><div id="card" className="card ms-2 rounded-4">
           <div className="card-body">
             <Image className="mt-2 mb-3"
               src={CardIcon}
@@ -98,7 +104,8 @@ export default function SideMenu() {
             <p className="card-text">Vacib sənədlərə sürətli keçid.</p>
             <button href="#" className="btn btn-light">Sənəd əlavə et</button>
           </div>
-        </div>
+        </div></div>
+        
       </div>
     </>
   )

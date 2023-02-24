@@ -32,11 +32,7 @@ export default function Body() {
     const handleChange2 = (e) => {
         setInputValue2(e.target.value)
     }
-    // const handleKeypress = e => {
-    //     if (e.code === "Enter") {
-    //         handleSearchByNumber();
-    //     }
-    // }
+
     const select = (val) => {
         if (!inputValue && !inputValue2) {
             return true;
@@ -45,7 +41,7 @@ export default function Body() {
             return val.id.includes(inputValue)
         }
         else if (inputValue2) {
-            return  val.createdAt.includes(inputValue2)
+            return val.createdAt.includes(inputValue2)
         }
     }
 
@@ -68,7 +64,6 @@ export default function Body() {
                         </button>
                         <input
                             onChange={handleChange}
-                            // onKeyPress={handleKeypress}
                             type="text" className="form-control shadow-none"
                             placeholder="Sənəd nömrəsi və ya partnyor adı"
                         />
@@ -104,13 +99,15 @@ export default function Body() {
                             getArray.filter((val) => {
                                 return select(val);
                             }).map((val) => (
-                                <tr>
+                                 <tr>
                                     <td className="cell-padding cell-padding-left-2">{val.id}</td>
                                     <td className="cell-padding cell-padding-left-2">{val.no}</td>
                                     <td className="cell-padding cell-padding-left">{moment(val.createdAt).format('DD.MM.YY')}</td>
                                     <td className="cell-padding cell-padding-left-2">{val.cost}</td>
                                     <td className="cell-padding cell-padding-left-2">{val.quantity}</td>
-                                    <td className="cell-padding cell-padding-left"><div className="alert alert-info"><FontAwesomeIcon icon={faKey} /></div></td>
+                                    <td className="cell-padding cell-padding-left">
+                                        <div className="alert alert-info"><FontAwesomeIcon icon={faKey} /></div>
+                                    </td>
                                     <td className="cell-padding cell-padding-left"><div className="alert alert-warning">{val.reason}</div></td>
                                     <td className="cell-padding cell-padding-left"><div className="alert alert-success">{val.status}</div></td>
                                 </tr>

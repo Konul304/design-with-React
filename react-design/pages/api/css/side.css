@@ -104,12 +104,21 @@ html{
 	width: 16%;
 	background-color: #233B82;
 	color: white;
-	/* margin-top: 40%; */
 	position: fixed;
 	bottom: 10px;
 	left: 5px;
+	z-index: 1;
 }
 
 #card .btn{
 	width: 100%;
+}
+
+.bg{
+	position: fixed;
+	height: 360px;
+	bottom: -4%;
+	left: 8%;
+	z-index: 2;
+	transform: rotate(25deg);
 }
