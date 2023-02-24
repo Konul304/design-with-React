@@ -102,7 +102,9 @@ export default function Body() {
                                 <tr>
                                     <td className="cell-padding cell-padding-left-2">{val.id}</td>
                                     <td className="cell-padding cell-padding-left-2">{val.no}</td>
-                                    <td className="cell-padding cell-padding-left">{moment(val.createdAt).format('DD.MM.YY')}</td>
+                                    <td className="cell-padding cell-padding-left">
+                                        {moment(val.createdAt).format('DD.MM.YY , h:mm:ss')}
+                                    </td>
                                     <td className="cell-padding cell-padding-left-2">{val.cost}</td>
                                     <td className="cell-padding cell-padding-left-2">{val.quantity}</td>
                                     <td className="cell-padding cell-padding-left">
@@ -117,4 +119,5 @@ export default function Body() {
                 </table>
             </div>
         </>
-    )}
+    )
+}
