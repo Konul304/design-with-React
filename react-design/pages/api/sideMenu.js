@@ -87,25 +87,24 @@ export default function SideMenu() {
           </li>
           <a href="#"><li className="noLink">Problemli məhsullar</li></a>
         </ul>
-        <div> <Image className=" bg"
-            src={bg}
-            alt="Picture of the author"
-            width="384px"
-            height="360px"
-          /><div id="card" className="card ms-2 rounded-4">
-          <div className="card-body">
-            <Image className="mt-2 mb-3"
-              src={CardIcon}
-              alt="Picture of the author"
-              width="34px"
-              height="34px"
-            />
-            <h5 className="card-title">Qısayol yarat</h5>
-            <p className="card-text">Vacib sənədlərə sürətli keçid.</p>
-            <button href="#" className="btn btn-light">Sənəd əlavə et</button>
-          </div>
-        </div></div>
-        
+        <div><Image className=" bg"
+          src={bg}
+          alt="Picture of the author"
+          width="384px"
+          height="360px"
+        /><div id="card" className="card ms-2 rounded-4">
+            <div className="card-body">
+              <Image className="mt-2 mb-3"
+                src={CardIcon}
+                alt="Picture of the author"
+                width="34px"
+                height="34px"
+              />
+              <h5 className="card-title">Qısayol yarat</h5>
+              <p className="card-text">Vacib sənədlərə sürətli keçid.</p>
+              <button href="#" className="btn btn-light">Sənəd əlavə et</button>
+            </div>
+          </div></div>
       </div>
     </>
   )

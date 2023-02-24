@@ -99,7 +99,7 @@ export default function Body() {
                             getArray.filter((val) => {
                                 return select(val);
                             }).map((val) => (
-                                 <tr>
+                                <tr>
                                     <td className="cell-padding cell-padding-left-2">{val.id}</td>
                                     <td className="cell-padding cell-padding-left-2">{val.no}</td>
                                     <td className="cell-padding cell-padding-left">{moment(val.createdAt).format('DD.MM.YY')}</td>
@@ -117,5 +117,4 @@ export default function Body() {
                 </table>
             </div>
         </>
-    )
-}
+    )}
