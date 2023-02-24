@@ -11,6 +11,9 @@ nav .btn{
     margin-right: 1rem;
 }
 
+nav .btn{
+    border: none;
+}
 .profile{
     margin-left: 6rem;
 }

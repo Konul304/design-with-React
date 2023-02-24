@@ -27,6 +27,7 @@ a {
 }
 
 .tableContent {
+    border-radius: 10px;
     background-color: #F5F6F8;
 }
 
@@ -62,4 +63,8 @@ thead {
 
 .header {
     padding: 15px;
+}
+
+body{
+    background-color: #eaebee;
 }

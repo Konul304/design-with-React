@@ -59,15 +59,15 @@ export default function Body() {
                             type="button" id="button-addon1">
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </button>
-                        <input id="input"
+                        <input 
                             onChange={handleChange}
                             // onKeyPress={handleKeypress}
-                            type="text" className="form-control"
+                            type="text" className="form-control shadow-none"
                             placeholder="Sənəd nömrəsi və ya partnyor adı"
                         />
                     </div>
                     <div className="input-group  group2">
-                        <input type="text" className="form-control"
+                        <input type="text" className="form-control shadow-none"
                             onChange={handleChange2}
                             placeholder="Tarix üzrə axtar"
                             aria-label="Recipient's username"
