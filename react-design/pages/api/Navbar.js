@@ -40,7 +40,7 @@ export default function Navbar() {
                                 height="34px"
                             /></button>
                         <div className='profile d-flex align-items-center me-3 justify-content-center'>
-                            <div className="d-flex flex-column">
+                            <div className="d-flex flex-column me-3">
                                 <span><b>Partnyor adı</b></span>
                                 <span className="text-end"><small>Hesabım</small></span>
                             </div>

@@ -86,9 +86,9 @@ export default function SideMenu() {
             </div>
           </li>
           <a href="#"><li className="noLink">
-          <FontAwesomeIcon icon={faCube} className="me-3"/>
+            <FontAwesomeIcon icon={faCube} className="me-3" />
             Problemli məhsullar
-            </li></a>
+          </li></a>
         </ul>
         <div><Image className=" bg"
           src={bg}
@@ -107,7 +107,8 @@ export default function SideMenu() {
               <p className="card-text">Vacib sənədlərə sürətli keçid.</p>
               <button href="#" className="btn btn-light">Sənəd əlavə et</button>
             </div>
-          </div></div>
+          </div>
+        </div>
       </div>
     </>
   )

@@ -27,14 +27,12 @@ a {
 }
 
 .tableContent {
-    border-radius: 10px;
     background-color: #F5F6F8;
 }
 
 .table {
-    width: 79%;
+    width: 78%;
     margin-left: 20%;
-    border-radius: 10px;
     background-color: white;
 }
 
@@ -59,6 +57,8 @@ thead {
     background-color: #d1d0d057;
     border-radius: 10px;
     color: gray;
+    text-align: left;
+    font-size: 14px;
 }
 
 .header {
@@ -66,13 +66,13 @@ thead {
 }
 
 body{
-    background-color: #eeeef0;
+    background-color: #e9eaed;
 }
 
 .alert{
     margin-bottom: 0;
 }
 
-.table>:not(caption)>*>*{
+/* .table>:not(caption)>*>*{
     padding-right: 3rem;
-}
+} */
