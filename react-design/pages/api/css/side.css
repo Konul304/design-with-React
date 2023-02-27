@@ -42,15 +42,15 @@ html{
 }
 
 .Item {
-	padding: 15px 0px;
+	padding: 15px 0px 0px 0px;
 	border-radius: 10px;
+	margin-bottom: 15px;
 }
-
 
 .Item a{
 	text-decoration: none;
 	color: black;
-	padding: 15px ;
+	padding: 15px 15px 0px 15px;
 	border-radius: 10px;
 }
 
@@ -68,7 +68,7 @@ html{
 
 }
 
-.Item a:hover{
+.Item .hoverable:hover{
 	color: white;
 	background-color: #233B82;
 }
@@ -88,17 +88,18 @@ html{
 }
 
 .collapse a{
-	padding: 10px 0px 10px 10px;
+	padding: 0px 0px 0px 0px;
 	display: block;
 }
 
 .collapse ul{
-	padding-top: 13px;
+	padding-left: 47px;
+	padding-bottom: 0px;
 }
 
-.collapse li{
+/* .collapse li{
 	list-style-type: circle;
-}
+} */
 
 #card{
 	width: 16%;

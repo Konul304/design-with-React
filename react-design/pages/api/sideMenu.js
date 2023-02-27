@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
-import { faCaretDown, faSquarePollVertical, faIdBadge, faChartSimple, faFileContract } from '@fortawesome/free-solid-svg-icons'
+import { faCaretDown, faSquarePollVertical, faIdBadge, faChartSimple, faFileContract, faCube } from '@fortawesome/free-solid-svg-icons'
 
 export default function SideMenu() {
   return (
@@ -20,13 +20,13 @@ export default function SideMenu() {
             width="146px"
             height="32px"
           />
-          <a href="#"><li className="noLink">
+          <a className="hoverable" href="#"><li className="noLink">
             <FontAwesomeIcon icon={faSquarePollVertical} className="me-3" />
             <span >Ana səhifə </span>
           </li></a>
           <li className="Item">
             <a
-              className="collapsed"
+              className="collapsed pb-3 hoverable"
               data-bs-toggle="collapse"
               href="#collapseExample1"
               role="button"
@@ -39,15 +39,15 @@ export default function SideMenu() {
             </a>
             <div className="collapse" id="collapseExample1">
               <ul>
-                <li><a href="#">Reqresslər</a></li>
-                <li><a href="#">Sazişlər</a></li>
-                <li><a href="#">Faktorinq müqaviləsi</a></li>
+                <li className="mt-3 mb-3"><a href="#">Reqresslər</a></li>
+                <li className="mt-2 mb-3"><a href="#">Sazişlər</a></li>
+                <li className="mt-2"><a href="#">Faktorinq müqaviləsi</a></li>
               </ul>
             </div>
           </li>
           <li className="Item">
             <a
-              className="collapsed"
+              className="collapsed pb-3 hoverable"
               data-bs-toggle="collapse"
               href="#collapseExample2"
               role="button"
@@ -60,15 +60,15 @@ export default function SideMenu() {
             </a>
             <div className="collapse" id="collapseExample2">
               <ul>
-                <li><a href="#">Reqresslər</a></li>
-                <li><a href="#">Sazişlər</a></li>
-                <li><a href="#">Faktorinq müqaviləsi</a></li>
+                <li className="mt-3 mb-3"><a href="#">Reqresslər</a></li>
+                <li className="mt-2 mb-3"><a href="#">Sazişlər</a></li>
+                <li className="mt-2"><a href="#">Faktorinq müqaviləsi</a></li>
               </ul>
             </div>
           </li>
           <li className="Item">
             <a
-              className="collapsed"
+              className="collapsed pb-3 hoverable"
               data-bs-toggle="collapse"
               href="#collapseExample3"
               role="button"
@@ -81,11 +81,14 @@ export default function SideMenu() {
             </a>
             <div className="collapse" id="collapseExample3">
               <ul >
-                <li><a href="#">Hesabat</a></li>
+                <li className="mt-3"><a href="#">Hesabat</a></li>
               </ul>
             </div>
           </li>
-          <a href="#"><li className="noLink">Problemli məhsullar</li></a>
+          <a href="#"><li className="noLink">
+          <FontAwesomeIcon icon={faCube} className="me-3"/>
+            Problemli məhsullar
+            </li></a>
         </ul>
         <div><Image className=" bg"
           src={bg}
