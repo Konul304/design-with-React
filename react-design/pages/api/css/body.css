@@ -124,4 +124,22 @@ body {
     height: 20px;
 }
 
+.pagination{
+    padding-left: 74%;
+}
 
+.active>.page-link{
+    background-color: #233B82;
+    border-color: #233B82;
+    box-shadow: none;
+}
+
+.page-link{
+    border-radius: 10px;
+    border-color:#F5F5F5 ;
+    width: 36px;
+    height: 36px;
+    margin: 0px 5px;
+    background-color: #F5F5F5;
+    color: #233B82;
+}

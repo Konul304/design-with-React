@@ -66,7 +66,7 @@ export default function Body() {
                             ))
                         }
                     </tbody>
-            
+
                 </table>
             </>
         );
@@ -98,12 +98,12 @@ export default function Body() {
             <>
                 <Items currentItems={currentItems} />
                 <ReactPaginate
-                    nextLabel="next >"
+                    nextLabel=">"
                     onPageChange={handlePageClick}
                     pageRangeDisplayed={3}
                     marginPagesDisplayed={2}
                     pageCount={pageCount}
-                    previousLabel="< previous"
+                    previousLabel="<"
                     pageClassName="page-item"
                     pageLinkClassName="page-link"
                     previousClassName="page-item"
@@ -122,7 +122,6 @@ export default function Body() {
     }
 
     const handleChange = (e) => {
-
         setInputValue(e.target.value)
     }
 
@@ -177,7 +176,7 @@ export default function Body() {
                     </div>
                 </div>
             </div>
-            <div className="tableContent">
+            <div className="tableContent" >
                 <PaginatedItems itemsPerPage={6} />
             </div>
         </>
