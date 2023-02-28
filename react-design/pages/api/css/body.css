@@ -63,7 +63,8 @@ a {
 }
 
 thead {
-    background-color: #d1d0d057;
+    background-color: #f5f6fa;
+    /* border: 1px solid black; */
     border-radius: 20px;
     color: gray;
     overflow: hidden;
@@ -71,7 +72,6 @@ thead {
     text-align: left;
     font-size: 14px;
 }
-
 
 .header {
     padding: 15px;
@@ -114,7 +114,3 @@ body {
     width: 20px;
     height: 20px;
 }
-
-/* .table>:not(caption)>*>*{
-    padding-right: 3rem;
-} */
