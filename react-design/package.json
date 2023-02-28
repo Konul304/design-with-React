@@ -24,7 +24,8 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-bootstrap-table-next": "^4.0.3",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-paginate": "^8.1.4"
   },
   "devDependencies": {
     "sass": "^1.58.3"
