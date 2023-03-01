@@ -10,7 +10,6 @@ import moment from 'moment';
 moment().format();
 import "bootstrap/dist/css/bootstrap.min.css";
 import ReactPaginate from "react-paginate"
-import { sendError } from "next/dist/server/api-utils"
 
 export default function Body() {
 
@@ -33,7 +32,7 @@ export default function Body() {
         return (
             <>
                 <table className="table">
-                    <thead className="cell-padding-left-2 ">
+                    <thead className="cell-padding-left-2">
                         <tr>
                             <th className=" cell-padding cell-padding-left round1" scope="col">N.A.S NO:</th>
                             <th className=" cell-padding cell-padding-left" scope="col">Reqress NO:</th>
@@ -67,31 +66,19 @@ export default function Body() {
                             ))
                         }
                     </tbody>
-
                 </table>
             </>
         );
     }
 
     const PaginatedItems = ({ itemsPerPage }) => {
-        // Here we use item offsets; we could also use page offsets
-        // following the API or data you're working with.
         const [itemOffset, setItemOffset] = useState(0);
 
-        // Simulate fetching items from another resources.
-        // (This could be items from props; or items loaded in a local state
-        // from an API endpoint with useEffect and useState)
         const endOffset = itemOffset + itemsPerPage;
-        console.log(`Loading items from ${itemOffset} to ${endOffset}`);
         const currentItems = items.slice(itemOffset, endOffset);
-        const pageCount = Math.ceil(items.length / itemsPerPage);
 
-        // Invoke when user click to request another page.
         const handlePageClick = (event) => {
             const newOffset = (event.selected * itemsPerPage) % items.length;
-            console.log(
-                `User requested page number ${event.selected}, which is offset ${newOffset}`
-            );
             setItemOffset(newOffset);
         };
 
@@ -142,7 +129,6 @@ export default function Body() {
         }
     }
 
-    //64vlla5
     return (
         <>
             <div className="mainContainer pt-4 pb-3 d-flex justify-content-between pe-3">
