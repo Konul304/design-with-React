@@ -1,10 +1,11 @@
+'use client';
 import "./css/body.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 import { faMagnifyingGlass, faCalendar, faKey } from '@fortawesome/free-solid-svg-icons'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, use } from 'react'
 import axios from "axios";
 import moment from 'moment';
 moment().format();
@@ -12,104 +13,49 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ReactPaginate from "react-paginate"
 
 export default function Body() {
-
-    const [getArray, setArray] = useState([])
+    const [items, setItems] = useState([]);
+    const [itemOffset, setItemOffset] = useState(0);
+    const [ itemsPerPage,setItemsPerPage] = useState(6)
+    const endOffset = itemOffset + itemsPerPage;
     const [inputValue, setInputValue] = useState('');
     const [inputValue2, setInputValue2] = useState('');
+    const [currentItems, setCurrentItems] = useState(items?.slice(itemOffset, endOffset));
+  
     useEffect(() => {
         axios({
             method: "GET",
             baseURL: "https://63f46dec3f99f5855daf40a5.mockapi.io/api/pk/pkdatas"
         })
             .then((res) => {
-                setArray(res.data);
+                const data = res?.data;
+                setItems(data);
+                setCurrentItems(data?.slice(itemOffset, endOffset))
             })
-    }, [])
+    }, [itemOffset])
+    let pageCount = Math.ceil(items?.length / itemsPerPage);
 
-    const items = getArray;
+    const handlePageClick = (event) => {
+        const newOffset = (event.selected * itemsPerPage) % items.length;
+        setItemOffset(newOffset);
+    };
 
-    function Items({ currentItems }) {
-        return (
-            <>
-                <table className="table">
-                    <thead className="cell-padding-left-2">
-                        <tr>
-                            <th className=" cell-padding cell-padding-left round1" scope="col">N.A.S NO:</th>
-                            <th className=" cell-padding cell-padding-left" scope="col">Reqress NO:</th>
-                            <th className=" cell-padding cell-padding-left" scope="col">Tarix</th>
-                            <th className=" cell-padding cell-padding-left" scope="col">Ümumi məbləğ</th>
-                            <th className=" cell-padding cell-padding-left" scope="col">Miqdar</th>
-                            <th className=" cell-padding" scope="col">E-imza</th>
-                            <th className=" cell-padding cell-padding-left-3" scope="col">Səbəb</th>
-                            <th className=" cell-padding cell-padding-left-3 round8" scope="col">Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            currentItems.filter((val) => {
-                                return select(val);
-                            }).map((val) => (
-                                <tr>
-                                    <td className="cell-padding cell-padding-left-2">{val.id}</td>
-                                    <td className="cell-padding cell-padding-left-2">{val.no}</td>
-                                    <td className="cell-padding cell-padding-left">
-                                        {moment(val.createdAt).format('DD.MM.YY , h:mm:ss')}
-                                    </td>
-                                    <td className="cell-padding cell-padding-left-2">{val.cost}</td>
-                                    <td className="cell-padding cell-padding-left-2">{val.quantity}</td>
-                                    <td className="pt-3">
-                                        <div className="key"><FontAwesomeIcon className="key1" icon={faKey} /></div>
-                                    </td>
-                                    <td className="cell-padding cell-padding-left"><div className="reason">{val.reason}</div></td>
-                                    <td className="cell-padding cell-padding-left pe-4"><div className="status">{val.status}</div></td>
-                                </tr>
-                            ))
-                        }
-                    </tbody>
-                </table>
-            </>
-        );
-    }
-
-    const PaginatedItems = ({ itemsPerPage }) => {
-        const [itemOffset, setItemOffset] = useState(0);
-
-        const endOffset = itemOffset + itemsPerPage;
-        const currentItems = items.slice(itemOffset, endOffset);
-        const pageCount = Math.ceil(items.length / itemsPerPage);
-
-        const handlePageClick = (event) => {
-            const newOffset = (event.selected * itemsPerPage) % items.length;
-
-            setItemOffset(newOffset);
-        };
-
-        return (
-            <>
-                <Items currentItems={currentItems} />
-                <ReactPaginate
-                    nextLabel=">"
-                    onPageChange={handlePageClick}
-                    pageRangeDisplayed={3}
-                    marginPagesDisplayed={2}
-                    pageCount={pageCount}
-                    previousLabel="<"
-                    pageClassName="page-item"
-                    pageLinkClassName="page-link"
-                    previousClassName="page-item"
-                    previousLinkClassName="page-link"
-                    nextClassName="page-item"
-                    nextLinkClassName="page-link"
-                    breakLabel="..."
-                    breakClassName="page-item"
-                    breakLinkClassName="page-link"
-                    containerClassName="pagination"
-                    activeClassName="active"
-                    renderOnZeroPageCount={null}
-                />
-            </>
-        );
-    }
+    useEffect(() => {
+        if (inputValue) {
+            const searchId = items.filter((val) => 
+                val.id.includes(inputValue)
+            )
+            setCurrentItems(searchId?.slice(itemOffset, endOffset));
+        }
+        else if (inputValue2) {
+            const searchDate = items.filter((val) => 
+                val.createdAt.includes(inputValue2)
+            )
+            setCurrentItems(searchDate?.slice(itemOffset, endOffset));
+        }
+        else {
+            setCurrentItems(items?.slice(itemOffset, endOffset))
+        }
+    }, [inputValue, inputValue2])
 
     const handleChange = (e) => {
         setInputValue(e.target.value)
@@ -117,18 +63,6 @@ export default function Body() {
 
     const handleChange2 = (e) => {
         setInputValue2(e.target.value)
-    }
-
-    const select = (val) => {
-        if (!inputValue && !inputValue2) {
-            return true;
-        }
-        else if (inputValue) {
-            return val.id.includes(inputValue)
-        }
-        else if (inputValue2) {
-            return val.createdAt.includes(inputValue2)
-        }
     }
 
     return (
@@ -157,8 +91,61 @@ export default function Body() {
                 </div>
             </div>
             <div className="tableContent" >
-                <PaginatedItems itemsPerPage={6} />
+                <table className="table">
+                    <thead className="cell-padding-left-2">
+                        <tr>
+                            <th className=" cell-padding cell-padding-left round1" scope="col">N.A.S NO:</th>
+                            <th className=" cell-padding cell-padding-left" scope="col">Reqress NO:</th>
+                            <th className=" cell-padding cell-padding-left" scope="col">Tarix</th>
+                            <th className=" cell-padding cell-padding-left" scope="col">Ümumi məbləğ</th>
+                            <th className=" cell-padding cell-padding-left" scope="col">Miqdar</th>
+                            <th className=" cell-padding" scope="col">E-imza</th>
+                            <th className=" cell-padding cell-padding-left-3" scope="col">Səbəb</th>
+                            <th className=" cell-padding cell-padding-left-3 round8" scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            currentItems?.map((val) => (
+                                <tr>
+                                    <td className="cell-padding cell-padding-left-2">{val.id}</td>
+                                    <td className="cell-padding cell-padding-left-2">{val.no}</td>
+                                    <td className="cell-padding cell-padding-left">
+                                        {moment(val.createdAt).format('DD.MM.YY , h:mm:ss')}
+                                    </td>
+                                    <td className="cell-padding cell-padding-left-2">{val.cost}</td>
+                                    <td className="cell-padding cell-padding-left-2">{val.quantity}</td>
+                                    <td className="pt-3">
+                                        <div className="key"><FontAwesomeIcon className="key1" icon={faKey} /></div>
+                                    </td>
+                                    <td className="cell-padding cell-padding-left"><div className="reason">{val.reason}</div></td>
+                                    <td className="cell-padding cell-padding-left pe-4"><div className="status">{val.status}</div></td>
+                                </tr>
+                            ))
+                        }
+                    </tbody>
+                </table>
             </div>
+            <ReactPaginate
+                nextLabel=">"
+                onPageChange={handlePageClick}
+                pageRangeDisplayed={3}
+                marginPagesDisplayed={2}
+                pageCount={pageCount}
+                previousLabel="<"
+                pageClassName="page-item"
+                pageLinkClassName="page-link"
+                previousClassName="page-item"
+                previousLinkClassName="page-link"
+                nextClassName="page-item"
+                nextLinkClassName="page-link"
+                breakLabel="..."
+                breakClassName="page-item"
+                breakLinkClassName="page-link"
+                containerClassName="pagination"
+                activeClassName="active"
+                renderOnZeroPageCount={null}
+            />
         </>
-    )
+    );
 }
