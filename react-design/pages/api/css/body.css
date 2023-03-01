@@ -18,12 +18,79 @@ a {
     color: gray;
 }
 
-.input-group {
-    width: 60%;
+form {
+    color: #555;
+    display: flex;
+    /* padding: 2px; */
+    border-radius: 5px;
+    background-color: white;
 }
 
-.group2 {
-    width: 35%;
+input[type="search"] {
+    border: none;
+    background: white;
+    margin: 0;
+    padding: 7px 8px;
+    font-size: 14px;
+    color: inherit;
+    border: 1px solid transparent;
+    border-radius: inherit;
+}
+
+input[type="search"]::placeholder {
+    color: #bbb;
+}
+
+button[type="submit"] {
+    overflow: hidden;
+    width: 38px;
+    padding: 0;
+    margin: 0px 5px;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+button[type="date"] {
+    text-indent: -999px;
+    overflow: hidden;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin: 6px 0px 5px 15px;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    background: transparent url("../../../public/images/note-text.svg") no-repeat center;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+button[type="submit"]:hover {
+    opacity: 1;
+}
+
+input[type="search"]:focus {
+    border-color: none;
+    outline: none;
+}
+
+.input1{
+    width: 150%;
+}
+
+.form1{
+    width: 275px;
+    margin-right: 10px;
+}
+
+.input2{
+    width: 70%;
+}
+
+.form2{
+    width: 185px;
 }
 
 .tableContent {
@@ -42,12 +109,12 @@ a {
     background-color: white;
 }
 
-.round1{
+.round1 {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
 
-.round8{
+.round8 {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -73,12 +140,12 @@ a {
     padding-left: 3rem;
 }
 
-.table .cell-padding-th{
+.table .cell-padding-th {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
-.table .cell-padding-top{
+.table .cell-padding-top {
     padding-top: 0.8rem;
 }
 
@@ -133,23 +200,23 @@ body {
     height: 20px;
 }
 
-.pagination{
+.pagination {
     padding-left: 74%;
 }
 
-.page-link:focus{
+.page-link:focus {
     box-shadow: none;
 }
 
-.active>.page-link{
+.active>.page-link {
     background-color: #233B82;
     border-color: #233B82;
     box-shadow: none;
 }
 
-.page-link{
+.page-link {
     border-radius: 10px;
-    border-color:#F5F5F5 ;
+    border-color: #F5F5F5;
     width: 36px;
     height: 36px;
     margin: 0px 5px;

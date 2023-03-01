@@ -80,7 +80,7 @@ export default function Body() {
 
         const handlePageClick = (event) => {
             const newOffset = (event.selected * itemsPerPage) % items.length;
-           
+
             setItemOffset(newOffset);
         };
 
@@ -141,28 +141,18 @@ export default function Body() {
                         <li className="breadcrumb-item">Müştəri</li>
                     </ol>
                 </div>
-                <div className="d-flex justify-content-center align-items-start">
-                    <div className="input-group">
-                        <button
-                            className="btn btn-outline-secondary"
-                            type="button" id="button-addon1">
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
-                        </button>
-                        <input
-                            onChange={handleChange}
-                            type="text" className="form-control shadow-none me-3"
-                            placeholder="Sənəd nömrəsi və ya partnyor adı"
-                        />
+                <div className="d-flex justify-content-between align-items-start me-3">
+                    <div className="group1">
+                        <form className=" form1">
+                                <button type="submit"></button>
+                            <input className="input1" onChange={handleChange} type="search" placeholder="Sənəd nömrəsi və ya partnyor adı"/>
+                        </form>
                     </div>
-                    <div className="input-group  group2">
-                        <input type="text" className="form-control shadow-none"
-                            onChange={handleChange2}
-                            placeholder="Tarix üzrə axtar"
-                            aria-label="Recipient's username"
-                            aria-describedby="button-addon2" />
-                        <button className="btn btn-outline-secondary" type="button" id="button-addon2">
-                            <FontAwesomeIcon icon={faCalendar} />
-                        </button>
+                    <div>
+                        <form className="form2">
+                            <input className="input2" onChange={handleChange2} type="search" placeholder="Tarix üzrə axtar"/>
+                                <button type="date">Search</button>
+                        </form>
                     </div>
                 </div>
             </div>
