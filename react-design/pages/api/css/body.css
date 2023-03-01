@@ -100,7 +100,7 @@ input[type="search"]:focus {
     padding-left: 0%;
     padding-top: 8px;
     margin-left: 20%;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 .table {
@@ -164,7 +164,7 @@ thead {
 }
 
 body {
-    background-color: #f5f6fa;
+    background-color: #F5F6F8;
 }
 
 .reason {
@@ -202,6 +202,7 @@ body {
 
 .pagination {
     padding-left: 74%;
+    margin-top: 3rem;
 }
 
 .page-link:focus {

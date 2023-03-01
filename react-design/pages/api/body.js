@@ -144,14 +144,14 @@ export default function Body() {
                 <div className="d-flex justify-content-between align-items-start me-3">
                     <div className="group1">
                         <form className=" form1">
-                                <button type="submit"></button>
-                            <input className="input1" onChange={handleChange} type="search" placeholder="Sənəd nömrəsi və ya partnyor adı"/>
+                            <button type="submit"></button>
+                            <input className="input1" onChange={handleChange} type="search" placeholder="Sənəd nömrəsi və ya partnyor adı" />
                         </form>
                     </div>
                     <div>
                         <form className="form2">
-                            <input className="input2" onChange={handleChange2} type="search" placeholder="Tarix üzrə axtar"/>
-                                <button type="date">Search</button>
+                            <input className="input2" onChange={handleChange2} type="search" placeholder="Tarix üzrə axtar" />
+                            <button type="date">Search</button>
                         </form>
                     </div>
                 </div>
