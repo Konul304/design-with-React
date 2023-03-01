@@ -33,12 +33,23 @@ a {
     padding-left: 0%;
     padding-top: 1%;
     margin-left: 20%;
+    padding-bottom: 2rem;
 }
 
 .table {
     width: 97%;
     margin-left: 1.5%;
     background-color: white;
+}
+
+.round1{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.round8{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .table .cell-padding {
@@ -73,7 +84,6 @@ a {
 
 thead {
     background-color: #f5f6fa;
-    /* border: 1px solid black; */
     border-radius: 20px;
     color: gray;
     overflow: hidden;
@@ -89,7 +99,6 @@ thead {
 body {
     background-color: #f5f6fa;
 }
-
 
 .reason {
     color: #233B82;
@@ -128,7 +137,7 @@ body {
     padding-left: 74%;
 }
 
-.pagination:focus{
+.page-link:focus{
     box-shadow: none;
 }
 

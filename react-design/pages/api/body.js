@@ -10,6 +10,7 @@ import moment from 'moment';
 moment().format();
 import "bootstrap/dist/css/bootstrap.min.css";
 import ReactPaginate from "react-paginate"
+import { sendError } from "next/dist/server/api-utils"
 
 export default function Body() {
 
@@ -34,14 +35,14 @@ export default function Body() {
                 <table className="table">
                     <thead className="cell-padding-left-2 ">
                         <tr>
-                            <th className=" cell-padding cell-padding-left" scope="col">N.A.S NO:</th>
+                            <th className=" cell-padding cell-padding-left round1" scope="col">N.A.S NO:</th>
                             <th className=" cell-padding cell-padding-left" scope="col">Reqress NO:</th>
                             <th className=" cell-padding cell-padding-left" scope="col">Tarix</th>
                             <th className=" cell-padding cell-padding-left" scope="col">Ümumi məbləğ</th>
                             <th className=" cell-padding cell-padding-left" scope="col">Miqdar</th>
                             <th className=" cell-padding" scope="col">E-imza</th>
                             <th className=" cell-padding cell-padding-left-3" scope="col">Səbəb</th>
-                            <th className=" cell-padding cell-padding-left-3" scope="col">Status</th>
+                            <th className=" cell-padding cell-padding-left-3 round8" scope="col">Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -57,7 +58,7 @@ export default function Body() {
                                     </td>
                                     <td className="cell-padding cell-padding-left-2">{val.cost}</td>
                                     <td className="cell-padding cell-padding-left-2">{val.quantity}</td>
-                                    <td className="pt-4">
+                                    <td className="pt-3">
                                         <div className="key"><FontAwesomeIcon className="key1" icon={faKey} /></div>
                                     </td>
                                     <td className="cell-padding cell-padding-left"><div className="reason">{val.reason}</div></td>
@@ -141,6 +142,7 @@ export default function Body() {
         }
     }
 
+    //64vlla5
     return (
         <>
             <div className="mainContainer pt-4 pb-3 d-flex justify-content-between pe-3">
