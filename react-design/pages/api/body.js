@@ -1,16 +1,16 @@
 'use client';
 import "./css/body.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { config } from '@fortawesome/fontawesome-svg-core'
-import '@fortawesome/fontawesome-svg-core/styles.css'
-config.autoAddCss = false
-import { faKey } from '@fortawesome/free-solid-svg-icons'
-import { useState, useEffect, use } from 'react'
 import axios from "axios";
 import moment from 'moment';
-moment().format();
-import "bootstrap/dist/css/bootstrap.min.css";
+import { useState, useEffect, use } from 'react'
 import ReactPaginate from "react-paginate"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { config } from '@fortawesome/fontawesome-svg-core'
+import { faKey } from '@fortawesome/free-solid-svg-icons'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+config.autoAddCss = false
+moment().format();
 
 export default function Body() {
     const [items, setItems] = useState([]);
@@ -82,14 +82,14 @@ export default function Body() {
                 <div className="d-flex justify-content-between align-items-start me-3">
                     <div className="group1">
                         <form className=" form1">
-                            <button type="submit"></button>
+                            <button type="submit"/>
                             <input className="input1" onChange={handleChange} type="search" placeholder="Sənəd nömrəsi və ya partnyor adı" />
                         </form>
                     </div>
                     <div>
                         <form className="form2">
                             <input className="input2" onChange={handleChange2} type="search" placeholder="Tarix üzrə axtar" />
-                            <button type="date">Search</button>
+                            <button type="date"/>
                         </form>
                     </div>
                 </div>
