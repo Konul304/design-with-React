@@ -76,20 +76,20 @@ input[type="search"]:focus {
     outline: none;
 }
 
-.input1{
+.input1 {
     width: 150%;
 }
 
-.form1{
+.form1 {
     width: 275px;
     margin-right: 10px;
 }
 
-.input2{
+.input2 {
     width: 70%;
 }
 
-.form2{
+.form2 {
     width: 185px;
 }
 
@@ -164,7 +164,8 @@ thead {
 }
 
 body {
-    background-color: #F5F6F8;
+    background: #F5F6F8;
+
 }
 
 .reason {
@@ -201,7 +202,7 @@ body {
 }
 
 .pagination {
-    padding-left: 78%;
+    margin-left: 75%;
     margin-top: 2rem;
 }
 
