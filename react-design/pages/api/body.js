@@ -15,12 +15,12 @@ import ReactPaginate from "react-paginate"
 export default function Body() {
     const [items, setItems] = useState([]);
     const [itemOffset, setItemOffset] = useState(0);
-    const [ itemsPerPage,setItemsPerPage] = useState(6)
+    const [itemsPerPage, setItemsPerPage] = useState(6)
     const endOffset = itemOffset + itemsPerPage;
     const [inputValue, setInputValue] = useState('');
     const [inputValue2, setInputValue2] = useState('');
     const [currentItems, setCurrentItems] = useState(items?.slice(itemOffset, endOffset));
-  
+
     useEffect(() => {
         axios({
             method: "GET",
@@ -29,33 +29,44 @@ export default function Body() {
             .then((res) => {
                 const data = res?.data;
                 setItems(data);
-                setCurrentItems(data?.slice(itemOffset, endOffset))
+                setCurrentItems(data?.slice(itemOffset, endOffset));
             })
     }, [itemOffset])
-    let pageCount = Math.ceil(items?.length / itemsPerPage);
+
+    const [pageCount, setPageCount] = useState(5);
+
+    // const  pageCount = Math.ceil(items?.length / itemsPerPage);
+
+    const [searchId, setId] = useState();
 
     const handlePageClick = (event) => {
-        const newOffset = (event.selected * itemsPerPage) % items.length;
-        setItemOffset(newOffset);
+            const newOffset = (event.selected * itemsPerPage) % items.length;
+            setItemOffset(newOffset);
     };
+
 
     useEffect(() => {
         if (inputValue) {
-            const searchId = items.filter((val) => 
-                val.id.includes(inputValue)
-            )
-            setCurrentItems(searchId?.slice(itemOffset, endOffset));
+            const filteredItems = items.filter((val) =>
+            val.id.includes(inputValue)
+        )
+            setId(filteredItems)
+            setCurrentItems(filteredItems);
+            setPageCount(0)
         }
         else if (inputValue2) {
-            const searchDate = items.filter((val) => 
+            const searchDate = items.filter((val) =>
                 val.createdAt.includes(inputValue2)
             )
             setCurrentItems(searchDate?.slice(itemOffset, endOffset));
         }
         else {
             setCurrentItems(items?.slice(itemOffset, endOffset))
+            setPageCount(5)
         }
     }, [inputValue, inputValue2])
+
+
 
     const handleChange = (e) => {
         setInputValue(e.target.value)
