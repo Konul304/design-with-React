@@ -33,40 +33,33 @@ export default function Body() {
             })
     }, [itemOffset])
 
-    const [pageCount, setPageCount] = useState(5);
-
-    // const  pageCount = Math.ceil(items?.length / itemsPerPage);
-
-    const [searchId, setId] = useState();
+    const [pageCount, setPageCount] = useState((Math.ceil(items?.length / itemsPerPage)));
 
     const handlePageClick = (event) => {
-            const newOffset = (event.selected * itemsPerPage) % items.length;
-            setItemOffset(newOffset);
+        const newOffset = (event.selected * itemsPerPage) % items.length;
+        setItemOffset(newOffset);
     };
-
 
     useEffect(() => {
         if (inputValue) {
             const filteredItems = items.filter((val) =>
-            val.id.includes(inputValue)
-        )
-            setId(filteredItems)
+                val.id.includes(inputValue)
+            )
             setCurrentItems(filteredItems);
-            setPageCount(0)
+            setPageCount(0);
         }
         else if (inputValue2) {
             const searchDate = items.filter((val) =>
                 val.createdAt.includes(inputValue2)
             )
-            setCurrentItems(searchDate?.slice(itemOffset, endOffset));
+            setCurrentItems(searchDate);
+            setPageCount(0);
         }
         else {
             setCurrentItems(items?.slice(itemOffset, endOffset))
             setPageCount(5)
         }
     }, [inputValue, inputValue2])
-
-
 
     const handleChange = (e) => {
         setInputValue(e.target.value)
