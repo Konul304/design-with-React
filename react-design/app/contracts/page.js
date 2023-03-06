@@ -1,5 +1,5 @@
 'use client';
-import "./css/body.css"
+import "../css/contracts.css"
 import axios from "axios";
 import moment from 'moment';
 import { useState, useEffect, use } from 'react'
@@ -12,7 +12,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 config.autoAddCss = false
 moment().format();
 
-export default function Body() {
+export default function Contracts() {
     const [items, setItems] = useState([]);
     const [itemOffset, setItemOffset] = useState(0);
     const itemsPerPage = 6

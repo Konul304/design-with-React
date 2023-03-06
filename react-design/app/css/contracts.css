@@ -61,7 +61,7 @@ button[type="date"] {
     margin: 6px 0px 5px 15px;
     border: 1px solid transparent;
     border-radius: inherit;
-    background: transparent url("../../../public/images/note-text.svg") no-repeat center;
+    background: transparent url("../../public/images/note-text.svg") no-repeat center;
     opacity: 0.7;
 }
 
@@ -165,9 +165,8 @@ thead {
     padding: 15px;
 }
 
-body {
+body{
     background: #F5F6F8;
-
 }
 
 .reason {

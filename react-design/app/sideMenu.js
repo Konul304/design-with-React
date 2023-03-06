@@ -1,15 +1,16 @@
 import "./css/side.css"
 import Image from 'next/image'
-import Logo from "../../public/images/Logo1.svg"
-import bg from "../../public/images/Group1.svg"
-import CardIcon from "../../public/images/CardIcon.svg"
+import Logo from "../public/images/Logo1.svg"
+import bg from "../public/images/Group1.svg"
+import CardIcon from "../public/images/CardIcon.svg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 import { faCaretDown, faSquarePollVertical, faIdBadge, faChartSimple, faFileContract, faCube } from '@fortawesome/free-solid-svg-icons'
+import Link from "next/link"
 
-export default function SideMenu() {
+export default function SideMenu(props) {
   return (
     <>
       <div className="sidebar">
@@ -20,12 +21,12 @@ export default function SideMenu() {
             width="146px"
             height="32px"
           />
-          <a className="hoverable" href="#"><li className="noLink">
-            <FontAwesomeIcon icon={faSquarePollVertical} className="me-3" />
-            <span >Ana səhifə </span>
-          </li></a>
+          <Link className="hoverable" href="/homePage"><li className="noLink">
+              <FontAwesomeIcon icon={faSquarePollVertical} className="me-3" />
+              <span >Ana səhifə </span>
+            </li></Link>
           <li className="Item">
-            <a
+            <Link href='/contracts' legacyBehavior><a
               className="collapsed pb-3 hoverable"
               data-bs-toggle="collapse"
               href="#collapseExample1"
@@ -37,6 +38,7 @@ export default function SideMenu() {
                 <FontAwesomeIcon icon={faFileContract} className="me-3" />
                 Müqavilələr<FontAwesomeIcon icon={faCaretDown} className="down" /></span>
             </a>
+            </Link>
             <div className="collapse" id="collapseExample1">
               <ul>
                 <li className="mt-3 mb-3"><a href="#">Reqresslər</a></li>

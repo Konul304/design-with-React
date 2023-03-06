@@ -1,13 +1,10 @@
 "use client";
-import "../pages/api/css/main.css"
+import "./css/main.css"
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Inter } from '@next/font/google'
-import SideMenu from '@/pages/api/sideMenu'
-import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from '@/pages/api/Navbar';
-import { useEffect } from "react";
-import Body from '@/pages/api/body';
-import "bootstrap/dist/css/bootstrap.min.css";
-
+import { useEffect, useState } from "react";
+import Layout from "./layout1";
 
 const inter = Inter({ subsets: ['latin'] })
 // className={styles.main}
@@ -18,11 +15,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="main">
-          <Navbar/>
-          <SideMenu />
-          <Body/>
-      </div>
+    <Layout/>
     </>
   )
 }
