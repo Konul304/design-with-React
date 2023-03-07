@@ -14,6 +14,8 @@ import wp from '../../public/images/wp.svg'
 import insta from '../../public/images/insta.svg'
 import map from '../../public/images/map.svg'
 import web from '../../public/images/web.svg'
+import phone from '../../public/images/phone.svg'
+import mail from '../../public/images/mail.svg'
 import cfLogo from '../../public/images/cfLogo.svg'
 import Card from '../cards';
 
@@ -111,6 +113,26 @@ export default function HomePage() {
                                 src={web}
                                 alt="Picture of the author"
                             />
+                        </div>
+                        <div className='info'>
+                            <div className='header'>Şirkət haqqında</div>
+                            <div className='text'>“City Finance” bank olmayan kredit təşkilatıdır. BOKT  2014-cü ildən Azərbaycan Respublikası Mərkəzi Bankı tərəfindən verilmiş lisenziya əsasında fəaliyyətə başlayaraq müxtəlif növ
+                                kreditlərin verilməsi xidmətini göstərir.</div>
+                            <div className='contactInfo'>Əlaqə məlumatları</div>
+                            <div className='d-flex align-items-center contactFlex'>
+                                <Image className='phone'
+                                    src={phone}
+                                    alt="Picture of the author"
+                                />
+                                <span>+994 12 000 00 00</span>
+                            </div>
+                            <div className='d-flex align-items-center contactFlex'>
+                                <Image className='phone'
+                                    src={mail}
+                                    alt="Picture of the author"
+                                />
+                                <span>info@cityfinance.com</span>
+                            </div>
                         </div>
                     </div>
                 </div>

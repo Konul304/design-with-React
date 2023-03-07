@@ -2,9 +2,9 @@ body {
     background-color: #F5F6F8;
 }
 
-.container{
+.container {
     margin-left: 19%;
-    height: 82vh;
+    height: 87vh;
 }
 
 .container1 {
@@ -32,19 +32,19 @@ h5 {
     position: relative;
     background-color: white;
     border-radius: 10px;
-    height: 100%;
+    padding-bottom: 24px;
 }
 
-.gold{
+.gold {
     position: relative;
     height: 118px;
-    background: linear-gradient(90deg, rgba(255,230,4,1) 0%, rgba(204,156,32,1) 100%);
+    background: linear-gradient(90deg, rgba(255, 230, 4, 1) 0%, rgba(204, 156, 32, 1) 100%);
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     padding: 0% 5% 0% 0%;
 }
 
-.innerDiv{
+.innerDiv {
     position: absolute;
     top: 0px;
     right: 10px;
@@ -53,41 +53,80 @@ h5 {
     font-size: 12px;
     border-radius: 3px;
     margin-top: 5%;
-    padding: 4px ;
+    padding: 4px;
     color: white;
-    background: linear-gradient(277.55deg, #B88C1C 0%, #FFE600 109.39%);;
+    background: linear-gradient(277.55deg, #B88C1C 0%, #FFE600 109.39%);
+    ;
 }
 
-.ellipse2{
+.ellipse2 {
     position: absolute;
     top: 0%;
     left: 0px;
 }
 
-.circle{
+.circle {
     position: relative;
     left: 30%;
     top: 50%;
 }
 
-.cfLogo{
+.cfLogo {
     position: absolute;
     top: 74%;
     left: 44%;
 }
 
-.sideBanner p{
+.sideBanner p {
     margin-top: 19%;
     font-size: 20px;
 }
 
-.fb{
+.fb {
     margin-left: 22px;
 }
 
-.fb,.wp,.insta,.map,.web{
+.fb,
+.wp,
+.insta,
+.map,
+.web {
     margin-right: 12px;
 }
+
+.info {
+    margin-left: 22px;
+}
+
+.header {
+    margin-top: 32px;
+    font-size: 15px;
+    color: #777D8B;
+    margin-bottom: 16px;
+}
+
+.text {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    color: #191C1F;
+    margin-bottom: 32px;
+}
+
+.contactInfo {
+    color: #777D8B;
+    font-size: 15px;
+}
+
+.contactFlex {
+    margin-top: 16px;
+}
+
+.phone {
+    margin-right: 10px;
+}
+
+
 
 /* 
 .image_outer_container {
