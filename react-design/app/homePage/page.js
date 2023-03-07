@@ -18,6 +18,7 @@ import phone from '../../public/images/phone.svg'
 import mail from '../../public/images/mail.svg'
 import cfLogo from '../../public/images/cfLogo.svg'
 import Card from '../cards';
+import ChartComponent from '../chart';
 
 export default function HomePage() {
     const stories = [
@@ -46,12 +47,12 @@ export default function HomePage() {
             <div className='d-flex justify-content-start container'>
                 <div className="container1">
                     <h5 className='mt-4'>Yeniliklər</h5>
-                    <div className='d-flex mt-4'>
-                        <Image id='story'
+                    {/* <div className='d-flex mt-4'> */}
+                        {/* <Image id='story'
                             src={story1}
                             alt="Picture of the author"
-                        />
-                        {/* <Image 
+                        /> */}
+                         {/* <Image 
                         src={story2}
                         alt="Picture of the author"
                     />
@@ -59,7 +60,8 @@ export default function HomePage() {
                         src={story3}
                         alt="Picture of the author"
                     /> */}
-                    </div>
+                    {/* </div> */}
+                    <ChartComponent/>
                     <Card />
                 </div>
                 <div className='container2 mt-4'>
