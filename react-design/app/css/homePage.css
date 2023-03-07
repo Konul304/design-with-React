@@ -1,8 +1,115 @@
-.container{
-    margin-left: 20%;
+body {
+    background-color: #F5F6F8;
 }
 
-h5{
+.container{
+    margin-left: 19%;
+    height: 82vh;
+}
+
+.container1 {
+    width: 66%;
+}
+
+h5 {
     /* font-size: 24px; */
 }
 
+#story {
+    width: 72px;
+    height: 72px;
+    border: 3px solid purple;
+    /* border-color:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(218,104,255,1) 35%, rgba(0,212,255,1) 100%);; */
+    border-radius: 50%;
+}
+
+.container2 {
+    margin-left: 1.5%;
+    width: 25.6%;
+}
+
+.sideBanner {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.gold{
+    position: relative;
+    height: 118px;
+    background: linear-gradient(90deg, rgba(255,230,4,1) 0%, rgba(204,156,32,1) 100%);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 0% 5% 0% 0%;
+}
+
+.innerDiv{
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    /* width: 115px; */
+    height: 22px;
+    font-size: 12px;
+    border-radius: 3px;
+    margin-top: 5%;
+    padding: 4px ;
+    color: white;
+    background: linear-gradient(277.55deg, #B88C1C 0%, #FFE600 109.39%);;
+}
+
+.ellipse2{
+    position: absolute;
+    top: 0%;
+    left: 0px;
+}
+
+.circle{
+    position: relative;
+    left: 30%;
+    top: 50%;
+}
+
+.cfLogo{
+    position: absolute;
+    top: 74%;
+    left: 44%;
+}
+
+.sideBanner p{
+    margin-top: 19%;
+    font-size: 20px;
+}
+
+.fb{
+    margin-left: 22px;
+}
+
+.fb,.wp,.insta,.map,.web{
+    margin-right: 12px;
+}
+
+/* 
+.image_outer_container {
+    width: 88px;
+    height: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 50%;
+    position: relative;
+}
+
+.image_inner_container {
+    border-radius: 50%;
+    padding: 2px;
+    background: #833ab4;
+    background: -webkit-linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4);
+    background: linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4);
+}
+
+.image_inner_container img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 5px solid white;
+} */

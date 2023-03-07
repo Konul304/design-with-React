@@ -1,0 +1,20 @@
+.card{
+    width: 29%;
+    height: 205px;
+    border: none;
+    border-radius: 10px;
+}
+
+.card small{
+    color: #777D8B;
+    font-size: 14px;
+}
+
+.card span{
+    font-size: 15px;
+    color: #777D8B;
+}
+
+.card p{
+    font-weight: bold;
+}

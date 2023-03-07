@@ -18,21 +18,21 @@ export default function Navbar() {
                 <nav className="navbar d-flex">
                     <h5 className="heading5"><b>Müştəri</b></h5>
                     <div className='d-flex '>
-                        <button className='btn'>
+                        <button className='btn btn1'>
                             <Image className="mt-2 mb-3"
                                 src={notification}
                                 alt="Picture of the author"
                                 width="34px"
                                 height="34px"
                             /></button>
-                        <button className='btn'>
+                        <button className='btn btn2'>
                             <Image className="mt-2 mb-3"
                                 src={calendar}
                                 alt="Picture of the author"
                                 width="34px"
                                 height="34px"
                             /></button>
-                        <button className='btn me-2'>
+                        <button className='btn '>
                             <Image className="mt-2 mb-3"
                                 src={messages}
                                 alt="Picture of the author"
@@ -50,7 +50,7 @@ export default function Navbar() {
                                 width="34px"
                                 height="34px"
                             />
-                            <button className="btn"><FontAwesomeIcon icon={faCaretDown} className="ms-4" /></button>
+                            <button className="btn btnIcon"><FontAwesomeIcon icon={faCaretDown} className="ms-4" /></button>
                         </div>
                     </div>
                 </nav>
