@@ -22,9 +22,9 @@ export default function SideMenu(props) {
             height="32px"
           />
           <Link className="hoverable" href="/homePage"><li className="noLink">
-              <FontAwesomeIcon icon={faSquarePollVertical} className="me-3" />
-              <span >Ana səhifə </span>
-            </li></Link>
+            <FontAwesomeIcon icon={faSquarePollVertical} className="me-3" />
+            <span >Ana səhifə </span>
+          </li></Link>
           <li className="Item">
             <Link href='/contracts' legacyBehavior><a
               className="collapsed pb-3 hoverable"
@@ -36,12 +36,13 @@ export default function SideMenu(props) {
             >
               <span>
                 <FontAwesomeIcon icon={faFileContract} className="me-3" />
-                Müqavilələr<FontAwesomeIcon icon={faCaretDown} className="down" /></span>
+                Müqavilələr<FontAwesomeIcon icon={faCaretDown} className="down" />
+              </span>
             </a>
             </Link>
             <div className="collapse" id="collapseExample1">
               <ul>
-                <li className="mt-3 mb-3"><a href="#">Reqresslər</a></li>
+                <li className="mt-3 mb-3"><Link href="/contracts">Reqresslər</Link></li>
                 <li className="mt-2 mb-3"><a href="#">Sazişlər</a></li>
                 <li className="mt-2"><a href="#">Faktorinq müqaviləsi</a></li>
               </ul>

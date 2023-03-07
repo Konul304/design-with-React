@@ -93,6 +93,13 @@ h5 {
 .web {
     margin-right: 12px;
 }
+.fb:hover,
+.wp:hover,
+.insta:hover,
+.map:hover,
+.web:hover{
+    cursor: pointer;
+}
 
 .info {
     margin-left: 22px;

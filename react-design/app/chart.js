@@ -31,23 +31,23 @@ export default function ChartComponent() {
             }
         );
 
-        myChart.destroy();
+        // myChart.destroy();
 
-        myChart = new Chart(
-            document.getElementById('myChart'),
-            {
-                type: 'bar',
-                data: {
-                    labels: data.map(row => row.year),
-                    datasets: [
-                        {
-                            label: 'Acquisitions',
-                            data: data.map(row => row.count)
-                        }
-                    ]
-                }
-            }
-        );
+        // myChart = new Chart(
+        //     document.getElementById('myChart'),
+        //     {
+        //         type: 'bar',
+        //         data: {
+        //             labels: data.map(row => row.year),
+        //             datasets: [
+        //                 {
+        //                     label: 'Acquisitions',
+        //                     data: data.map(row => row.count)
+        //                 }
+        //             ]
+        //         }
+        //     }
+        // );
     })()
 
     return (
