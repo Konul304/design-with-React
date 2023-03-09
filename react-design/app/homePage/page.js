@@ -1,9 +1,6 @@
 'use client';
 import '../css/homePage.css'
 import Image from 'next/image'
-import Stories from 'stories-react';
-import 'stories-react/dist/index.css';
-import story1 from '../../public/images/story1.svg'
 import ellipse1 from '../../public/images/Ellipse1.svg'
 import ellipse2 from '../../public/images/ellipse2.svg'
 import ellipse3 from '../../public/images/ellipse3.svg'
@@ -19,6 +16,7 @@ import mail from '../../public/images/mail.svg'
 import cfLogo from '../../public/images/cfLogo.svg'
 import Card from '../cards';
 import ChartComponent from '../chart';
+import Story from '../story';
 
 export default function HomePage() {
     const stories = [
@@ -47,20 +45,9 @@ export default function HomePage() {
             <div className='d-flex justify-content-start container'>
                 <div className="container1">
                     <h5 className='mt-4'>Yeniliklər</h5>
-                    {/* <div className='d-flex mt-4'> */}
-                    {/* <Image id='story'
-                            src={story1}
-                            alt="Picture of the author"
-                        /> */}
-                    {/* <Image 
-                        src={story2}
-                        alt="Picture of the author"
-                    />
-                     <Image 
-                        src={story3}
-                        alt="Picture of the author"
-                    /> */}
-                    {/* </div> */}
+                    <div className='storyDiv'>
+                        <Story/>
+                    </div>
                     <div className='chartDiv'>
                         <div className='chartTitle'>Dövriyyə</div>
                         <div className='d-flex align-items-baseline'>
