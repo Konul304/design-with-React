@@ -4,7 +4,7 @@ body {
 
 .container {
     margin-left: 19%;
-    height: 87vh;
+    height: 89vh;
 }
 
 .container1 {
@@ -12,25 +12,19 @@ body {
     height: 82vh;
 }
 
+.storyDiv{
+width: 100%;
+height: 85px;
+}
+
 .month{
     font-size: 14px;
     color: #777D8B;
 }
 
-h5 {
-    /* font-size: 24px; */
-}
-
-#story {
-    width: 72px;
-    height: 72px;
-    border: 3px solid purple;
-    /* border-color:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(218,104,255,1) 35%, rgba(0,212,255,1) 100%);; */
-    border-radius: 50%;
-}
-
 .chartDiv{
     width: 100%;
+    height: 297px;
     border-radius: 10px;
     background-color: white;
     padding: 16px;
@@ -129,6 +123,7 @@ h5 {
     font-size: 15px;
     color: #777D8B;
     margin-bottom: 16px;
+    padding: 0;
 }
 
 .text {
@@ -137,6 +132,7 @@ h5 {
     letter-spacing: 0.1px;
     color: #191C1F;
     margin-bottom: 32px;
+    margin-top: 0px;
 }
 
 .contactInfo {
