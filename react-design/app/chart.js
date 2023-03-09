@@ -1,5 +1,4 @@
 import Chart from 'chart.js/auto';
-import { useEffect } from 'react';
 import './css/chart.css'
 
 export default function ChartComponent() {
@@ -32,14 +31,31 @@ export default function ChartComponent() {
                         {
                             label: 'Acquisitions by year',
                             data: data.map(row => row.count),
-                            backgroundColor: '#233B82',
+                            backgroundColor: '#F5F6F8',
                             borderRadius: 10,
+
                         }
                     ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            ticks: { color: 'black', beginAtZero: true },
+                            grid: {
+                                display: false
+                            }
+                        },
+                        x: {
+                            ticks: { color: 'black', beginAtZero: true },
+                            grid: {
+                                display: false
+                            }
+                        },
+                    }
                 }
             }
         );
-
     })()
 
     return (
