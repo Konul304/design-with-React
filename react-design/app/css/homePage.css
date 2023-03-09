@@ -42,6 +42,7 @@ height: 85px;
 }
 
 .sideBanner {
+    height: 98%;
     position: relative;
     background-color: white;
     border-radius: 10px;

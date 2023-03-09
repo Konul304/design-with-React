@@ -5,7 +5,7 @@ import story1 from '../public/images/story1.svg'
 export default function Story() {
     return (
         <>
-            <div className='d-flex mt-4 justify-content-between'>
+            <div className='d-flex mt-2 justify-content-between'>
                 <Image 
                     src={story1}
                     alt="Picture of the author"
