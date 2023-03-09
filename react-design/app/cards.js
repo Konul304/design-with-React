@@ -6,7 +6,7 @@ import img2 from '../public/images/cardImg2.svg'
 export default function Card() {
     return (
         <>
-            <div className="d-flex cards justify-content-start alignt-items-center mt-5">
+            <div className="d-flex cards justify-content-start alignt-items-center mt-3">
                 <div className="card me-3 p-3 ">
                     <div className="d-flex justify-content-between">
                         <p className="me-5">Sazişlər</p>
