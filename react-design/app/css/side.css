@@ -88,11 +88,11 @@ html {
 }
 
 .collapse li {
-	padding: 0px 0px 0px 0px;
+	padding: 0px;
 }
 
 .collapse a {
-	padding: 0px 0px 0px 0px;
+	padding: 0px;
 	display: block;
 }
 
