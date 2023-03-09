@@ -29,11 +29,16 @@ export default function ChartComponent() {
                     labels: data.map(row => row.year),
                     datasets: [
                         {
-                            label: 'Acquisitions by year',
-                            data: data.map(row => row.count),
+                            label: 'cost',
+                            data:data.map(row => row.count),
                             backgroundColor: '#F5F6F8',
                             borderRadius: 10,
-
+                            barThickness: 34,
+                            hoverBackgroundColor: '#233B82',
+                            
+                            // borderWidth: 1,
+                            // categoryPercentage: 2, 
+                            // barPercentage: 1,
                         }
                     ]
                 },
@@ -41,18 +46,31 @@ export default function ChartComponent() {
                     responsive: true,
                     scales: {
                         y: {
-                            ticks: { color: 'black', beginAtZero: true },
+                            ticks: { color: 'black', beginAtZero: false, font: 12 },
                             grid: {
                                 display: false
-                            }
+                            },
+                            border: {
+                                display: false,
+                            },
                         },
                         x: {
-                            ticks: { color: 'black', beginAtZero: true },
+                            ticks: { color: 'black', beginAtZero: true, font: 1 },
                             grid: {
                                 display: false
-                            }
+                            },
+                            border: {
+                                display: false,
+                            },
                         },
+                    },
+                    plugins: {
+                        legend: {
+
+                            display: false
+                        }
                     }
+
                 }
             }
         );
