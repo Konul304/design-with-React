@@ -5,3 +5,10 @@
     /* border-color:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(218,104,255,1) 35%, rgba(0,212,255,1) 100%); */
     border-radius: 50%;
 } 
+
+.slideshow{
+    position: absolute;
+    z-index: 2;
+    top:16%;
+    left: 37%;
+}
