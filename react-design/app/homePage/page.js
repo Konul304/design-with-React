@@ -48,11 +48,11 @@ export default function HomePage() {
                 <div className="container1">
                     <h5 className='mt-4'>Yeniliklər</h5>
                     {/* <div className='d-flex mt-4'> */}
-                        {/* <Image id='story'
+                    {/* <Image id='story'
                             src={story1}
                             alt="Picture of the author"
                         /> */}
-                         {/* <Image 
+                    {/* <Image 
                         src={story2}
                         alt="Picture of the author"
                     />
@@ -61,7 +61,14 @@ export default function HomePage() {
                         alt="Picture of the author"
                     /> */}
                     {/* </div> */}
-                    <div className='chartDiv'><ChartComponent/></div>
+                    <div className='chartDiv'>
+                        <div className='chartTitle'>Dövriyyə</div>
+                        <div className='d-flex align-items-baseline'>
+                            <div className='mb-3 fs-4 me-2'><b>682.5 ₼</b></div>
+                            <div className='month'>/ Iyun ayı</div>
+                        </div>
+                        <ChartComponent />
+                    </div>
                     <Card />
                 </div>
                 <div className='container2 mt-4'>
