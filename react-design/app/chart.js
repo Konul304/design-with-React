@@ -4,18 +4,23 @@ import './css/chart.css'
 
 export default function ChartComponent() {
     const data = [
-        { year: 'Yan', count: 10 },
-        { year: 'Fev', count: 20 },
+        { year: 'Yan', count: 20 },
+        { year: 'Fev', count: 50 },
         { year: "Mar", count: 30 },
         { year: "İyun", count: 40 },
-        { year: "İyul", count: 50 },
-        { year: "Avq", count: 60 },
-        { year: "Sen", count: 70 },
-        { year: "Okt", count: 80 },
-        { year: "Noy", count: 90 },
-        { year: "Dek", count: 100 },
+        { year: "İyul", count: 30 },
+        { year: "Avq", count: 50 },
+        { year: "Sen", count: 30 },
+        { year: "Okt", count: 40 },
+        { year: "Noy", count: 20 },
+        { year: "Dek", count: 30 },
     ];
     (async function () {
+
+        let chartStatus = Chart.getChart("myChart");
+        if (chartStatus != undefined) {
+            chartStatus.destroy();
+        }
 
         new Chart(
             document.getElementById('myChart'),
@@ -34,8 +39,6 @@ export default function ChartComponent() {
                 }
             }
         );
-
-        // myChart.destroy()
 
     })()
 
