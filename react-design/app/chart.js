@@ -1,19 +1,23 @@
 import Chart from 'chart.js/auto';
+import { useEffect } from 'react';
 import './css/chart.css'
 
 export default function ChartComponent() {
     const data = [
-        { year: 2017, count: '10K' },
-        { year: 2011, count: 20 },
-        { year: 2012, count: 15 },
-        { year: 2013, count: 25 },
-        { year: 2014, count: 22 },
-        { year: 2015, count: 30 },
-        { year: 2016, count: 28 },
+        { year: 'Yan', count: 10 },
+        { year: 'Fev', count: 20 },
+        { year: "Mar", count: 30 },
+        { year: "İyun", count: 40 },
+        { year: "İyul", count: 50 },
+        { year: "Avq", count: 60 },
+        { year: "Sen", count: 70 },
+        { year: "Okt", count: 80 },
+        { year: "Noy", count: 90 },
+        { year: "Dek", count: 100 },
     ];
     (async function () {
 
-        let myChart = new Chart(
+        new Chart(
             document.getElementById('myChart'),
             {
                 type: 'bar',
@@ -23,31 +27,16 @@ export default function ChartComponent() {
                         {
                             label: 'Acquisitions by year',
                             data: data.map(row => row.count),
-                            backgroundColor:'#F5F6F8',
-                            borderRadius:'10px',
+                            backgroundColor: '#233B82',
+                            borderRadius: 10,
                         }
                     ]
                 }
             }
         );
 
-        // myChart.destroy();
+        // myChart.destroy()
 
-        // myChart = new Chart(
-        //     document.getElementById('myChart'),
-        //     {
-        //         type: 'bar',
-        //         data: {
-        //             labels: data.map(row => row.year),
-        //             datasets: [
-        //                 {
-        //                     label: 'Acquisitions',
-        //                     data: data.map(row => row.count)
-        //                 }
-        //             ]
-        //         }
-        //     }
-        // );
     })()
 
     return (
