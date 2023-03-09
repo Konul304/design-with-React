@@ -11,6 +11,10 @@
 	position: relative;
 }
 
+a{
+	text-decoration: none;
+}
+
 html {
 	background-color: #F5F6F8;
 }
