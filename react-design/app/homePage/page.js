@@ -61,7 +61,7 @@ export default function HomePage() {
                         alt="Picture of the author"
                     /> */}
                     {/* </div> */}
-                    <ChartComponent/>
+                    <div className='chartDiv'><ChartComponent/></div>
                     <Card />
                 </div>
                 <div className='container2 mt-4'>

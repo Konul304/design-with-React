@@ -1,3 +1,8 @@
+canvas{
+    width: 90% !important;
+    height: 297px !important;
+}
+
 #myChart{
-    height: 297px;
+    width: 100%;
 }
