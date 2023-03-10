@@ -149,29 +149,3 @@ height: 85px;
     margin-right: 10px;
 }
 
-
-
-/* 
-.image_outer_container {
-    width: 88px;
-    height: 100px;
-    margin-top: auto;
-    margin-bottom: auto;
-    border-radius: 50%;
-    position: relative;
-}
-
-.image_inner_container {
-    border-radius: 50%;
-    padding: 2px;
-    background: #833ab4;
-    background: -webkit-linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4);
-    background: linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4);
-}
-
-.image_inner_container img {
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    border: 5px solid white;
-} */

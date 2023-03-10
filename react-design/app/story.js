@@ -17,6 +17,8 @@ export default function Story() {
     const [isShown, setIsShown] = useState(false);
     const handleClick = () => {
         setIsShown(current => !current);
+        // document.body.style.background='rgba(255,255,255,0.5)';
+        // document.body.style.filter='blur(10px)';
     }
     document.body.addEventListener('click', () => { setIsShown(false) })
 
@@ -42,40 +44,71 @@ export default function Story() {
         <>
             <div className='d-flex mt-2 justify-content-between'>
                 {isShown && <div className="slideshow" ><Stories width="400px" height="600px" stories={stories} /></div>}
-                {/* <div className='story_wrapper'> */}
-                    <Image onClick={handleClick} className="img"
-                        src={story1}
-                        alt="Picture of the author"
-                    />
-                {/* </div> */}
-                <Image onClick={handleClick}
-                    src={story2}
-                    alt="Picture of the author"
-                />
-                <Image onClick={handleClick}
-                    src={story3}
-                    alt="Picture of the author"
-                />
-                <Image onClick={handleClick}
-                    src={story4}
-                    alt="Picture of the author"
-                />
-                <Image onClick={handleClick}
-                    src={story5}
-                    alt="Picture of the author"
-                />
-                <Image onClick={handleClick}
-                    src={story6}
-                    alt="Picture of the author"
-                />
-                <Image onClick={handleClick}
-                    src={story7}
-                    alt="Picture of the author"
-                />
-                <Image onClick={handleClick}
-                    src={story8}
-                    alt="Picture of the author"
-                />
+                <a class="story">
+                    <div class="profile">
+                        {/* <img src="https://www.w3schools.com/w3images/avatar2.png" alt="" /> */}
+                        <Image onClick={handleClick} className="img"
+                            src={story1}
+                            alt="Picture of the author"
+                        />
+                    </div>
+                </a>
+                <a class="story">
+                    <div class="profile">
+                        <Image onClick={handleClick}
+                            src={story2}
+                            alt="Picture of the author"
+                        />
+                    </div>
+                </a>
+                <a class="story">
+                    <div class="profile">
+                        <Image onClick={handleClick}
+                            src={story3}
+                            alt="Picture of the author"
+                        />
+                    </div>
+                </a>
+                <a class="story">
+                    <div class="profile">
+                        <Image onClick={handleClick}
+                            src={story4}
+                            alt="Picture of the author"
+                        />
+                    </div>
+                </a>
+                <a class="story">
+                    <div class="profile">
+                        <Image onClick={handleClick}
+                            src={story5}
+                            alt="Picture of the author"
+                        />
+                    </div>
+                </a>
+                <a class="story">
+                    <div class="profile">
+                        <Image onClick={handleClick}
+                            src={story6}
+                            alt="Picture of the author"
+                        />
+                    </div>
+                </a>
+                <a class="story">
+                    <div class="profile">
+                        <Image onClick={handleClick}
+                            src={story7}
+                            alt="Picture of the author"
+                        />
+                    </div>
+                </a>
+                <a class="story">
+                    <div class="profile">
+                        <Image onClick={handleClick}
+                            src={story8}
+                            alt="Picture of the author"
+                        />
+                    </div>
+                </a>
             </div>
         </>
     )
