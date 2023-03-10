@@ -16,35 +16,83 @@ import { useState } from 'react';
 
 export default function Story() {
     const [isShown, setIsShown] = useState(false);
+    const [isShown2, setIsShown2] = useState(false);
     const handleClick = () => {
         setIsShown(current => !current);
+        // document.styleSheets[0].addRule('body > *:not(#story)','filter:blur(10px)',0);
+        // document.styleSheets[0].rules[0].style.filter= 'blur(10px)';
+        // document.body.style.filter='blur(10px)';
+    }
+    const handleClick2 = () => {
+        setIsShown2(current => !current);
         // document.body.style.background='rgba(255,255,255,0.5)';
         // document.body.style.filter='blur(10px)';
     }
-    document.body.addEventListener('click', () => { setIsShown(false) })
-
+    document.body.addEventListener('click', () => { 
+        setIsShown(false)
+        setIsShown2(false)
+     })
+    const handleSwitch = () => {
+        setIsShown(false);
+        setIsShown2(true);
+    }
+    const handleSwitch2 = () => {
+        setIsShown2(false);
+    }
     const stories = [
         {
             type: 'image',
             url: 'https://images.pexels.com/photos/9470805/pexels-photo-9470805.jpeg?w=300',
-            duration: 5000,
+            duration: 2000,
         },
         {
             type: 'image',
-            duration: 6000,
+            duration: 2000,
             url: 'https://images.pexels.com/photos/9733197/pexels-photo-9733197.jpeg?w=300',
         },
         {
-            duration: 7000,
+            duration: 2000,
             type: 'image',
             url: 'https://images.pexels.com/photos/9470805/pexels-photo-9470805.jpeg?w=300',
+        },
+    ];
+    const stories2 = [
+        {
+            type: 'image',
+            url: 'https://images.pexels.com/photos/9733197/pexels-photo-9733197.jpeg?w=300',
+            duration: 2000,
+        },
+        {
+            type: 'image',
+            duration: 2000,
+            url: 'https://images.pexels.com/photos/9733197/pexels-photo-9733197.jpeg?w=300',
+        },
+        {
+            duration: 2000,
+            type: 'image',
+            url: 'https://images.pexels.com/photos/9733197/pexels-photo-9733197.jpeg?w=300',
         },
     ];
 
     return (
         <>
             <div className='d-flex mt-1 justify-content-between'>
-                {isShown && <div className="slideshow" ><Stories width="400px" height="600px" stories={stories} /></div>}
+                {isShown && <div className="slideshow" >
+                    <Stories  id='story'
+                        onAllStoriesEnd={handleSwitch}
+                        defaultDuration={20000}
+                        pauseStoryWhenInActiveWindow={true}
+                        width="400px" height="600px"
+                        stories={stories} />
+                </div>}
+                {isShown2 && <div className="slideshow" >
+                    <Stories
+                        onAllStoriesEnd={handleSwitch2}
+                        defaultDuration={20000}
+                        pauseStoryWhenInActiveWindow={true}
+                        width="400px" height="600px"
+                        stories={stories2} />
+                </div>}
                 <a class="story">
                     <div class="profile">
                         <Image onClick={handleClick} className="img"
@@ -55,7 +103,7 @@ export default function Story() {
                 </a>
                 <a class="story">
                     <div class="profile">
-                        <Image onClick={handleClick}
+                        <Image onClick={handleClick2}
                             src={pic1}
                             alt="Picture of the author"
                         />

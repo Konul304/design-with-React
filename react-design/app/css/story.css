@@ -53,7 +53,7 @@
     box-sizing: content-box;
   }
   
-  .story .profile.visited {
+  .story .profile:visited {
     background: #ccc;
   }
   
@@ -63,7 +63,7 @@
     animation-iteration-count: infinite;
   }
   
-  
+/*   
 @keyframes story {
     0% {
       background: linear-gradient(
@@ -185,4 +185,4 @@
         rgb(255, 9, 237) 100%
       );
     }
-  }
+  } */
