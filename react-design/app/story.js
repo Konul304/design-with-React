@@ -15,6 +15,10 @@ import { useState } from 'react';
 
 export default function Story() {
     const [isShown, setIsShown] = useState(false);
+    const handleClick = () => {
+        setIsShown(current => !current);
+    }
+    document.body.addEventListener('click', () => { setIsShown(false) })
 
     const stories = [
         {
@@ -34,17 +38,16 @@ export default function Story() {
         },
     ];
 
-    const handleClick = () => {
-        setIsShown(current => !current);
-    }
     return (
         <>
             <div className='d-flex mt-2 justify-content-between'>
                 {isShown && <div className="slideshow" ><Stories width="400px" height="600px" stories={stories} /></div>}
-                <Image onClick={handleClick}
-                    src={story1}
-                    alt="Picture of the author"
-                />
+                {/* <div className='story_wrapper'> */}
+                    <Image onClick={handleClick} className="img"
+                        src={story1}
+                        alt="Picture of the author"
+                    />
+                {/* </div> */}
                 <Image onClick={handleClick}
                     src={story2}
                     alt="Picture of the author"
