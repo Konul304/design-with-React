@@ -1,18 +1,9 @@
 import 'stories-react/dist/index.css';
 import Image from 'next/image';
-// import story1 from '../public/images/story1.svg'
-// import story2 from '../public/images/story2.svg'
-// import story3 from '../public/images/story3.svg'
-// import story4 from '../public/images/story4.svg'
-// import story5 from '../public/images/story5.svg'
-// import story6 from '../public/images/story6.svg'
-// import story7 from '../public/images/story7.svg'
-// import story8 from '../public/images/story8.svg'
 import pic1 from '../public/images/pic1.webp'
 import './css/story.css'
 import Stories from 'stories-react';
 import { useState } from 'react';
-
 
 export default function Story() {
     const [isShown, setIsShown] = useState(false);
@@ -25,25 +16,33 @@ export default function Story() {
     }
     const handleClick2 = () => {
         setIsShown2(current => !current);
-        // document.body.style.background='rgba(255,255,255,0.5)';
-        // document.body.style.filter='blur(10px)';
     }
-    document.body.addEventListener('click', () => { 
+
+    document.body.addEventListener('click', () => {
+        for (let i = 0; i < 8; i++) {
+            { `setIshown${i}` }
+        }
+    })
+
+    document.body.addEventListener('click', () => {
         setIsShown(false)
-        setIsShown2(false)
-     })
-    const handleSwitch = () => {
+    })
+
+    const handleSwitch1 = () => {
         setIsShown(false);
         setIsShown2(true);
     }
     const handleSwitch2 = () => {
         setIsShown2(false);
     }
+    // const varToString = varObj => Object.keys(varObj)[0]
+
     const stories = [
         {
             type: 'image',
             url: 'https://images.pexels.com/photos/9470805/pexels-photo-9470805.jpeg?w=300',
             duration: 2000,
+            
         },
         {
             type: 'image',
@@ -74,25 +73,41 @@ export default function Story() {
         },
     ];
 
+    function ShowStory() {
+        for (let i = 2; i < 8; i++) {
+            {
+                isShown[i] && <div className="slideshow" >
+                    <Stories id='story'
+                        onAllStoriesEnd={handleSwitch2}
+                        defaultDuration={20000}
+                        pauseStoryWhenInActiveWindow={true}
+                        width="400px" height="600px"
+                        stories={`stories${i}`} />
+                </div>
+            }
+        }
+    }
+
     return (
         <>
             <div className='d-flex mt-1 justify-content-between'>
-                {isShown && <div className="slideshow" >
-                    <Stories  id='story'
-                        onAllStoriesEnd={handleSwitch}
+                {isShown && <div className="slideshow" id='story'>
+                    <Stories id='story'
+                        onAllStoriesEnd={handleSwitch1}
                         defaultDuration={20000}
                         pauseStoryWhenInActiveWindow={true}
                         width="400px" height="600px"
                         stories={stories} />
                 </div>}
-                {isShown2 && <div className="slideshow" >
+                <ShowStory />
+                {/* {isShown2 && <div className="slideshow" >
                     <Stories
                         onAllStoriesEnd={handleSwitch2}
                         defaultDuration={20000}
                         pauseStoryWhenInActiveWindow={true}
                         width="400px" height="600px"
                         stories={stories2} />
-                </div>}
+                </div>} */}
                 <a class="story">
                     <div class="profile">
                         <Image onClick={handleClick} className="img"
