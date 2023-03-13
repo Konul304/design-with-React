@@ -24,8 +24,8 @@ export default function HomePage() {
         <>
             <div className='d-flex justify-content-start container'>
                 <div className="container1">
-                    <h5 className='mt-4'>Yeniliklər</h5>
-                    <div className='storyDiv'>
+                    <h5 className='mt-3'>Yeniliklər</h5>
+                    <div className='storyDiv mb-3 mt-2'>
                         <Story/>
                     </div>
                     <div className='chartDiv'>
@@ -92,8 +92,8 @@ export default function HomePage() {
                         </div>
                         <div className='info'>
                             <div className='header'>Şirkət haqqında</div>
-                            <div className='text'>“City Finance” bank olmayan kredit təşkilatıdır. BOKT  2014-cü ildən Azərbaycan Respublikası Mərkəzi Bankı tərəfindən verilmiş lisenziya əsasında fəaliyyətə başlayaraq müxtəlif növ
-                                kreditlərin verilməsi xidmətini göstərir.</div>
+                            <div className='text text-left me-4'>“City Finance” bank olmayan kredit təşkilatıdır. BOKT  2014-cü ildən Azərbaycan Respublikası Mərkəzi Bankı tərəfindən verilmiş lisenziya əsasında fəaliyyətə başlayaraq müxtəlif növ
+                               <br></br> kreditlərin verilməsi xidmətini göstərir.</div>
                             <div className='contactInfo'>Əlaqə məlumatları</div>
                             <div className='d-flex align-items-center contactFlex'>
                                 <Image className='phone'
