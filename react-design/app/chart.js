@@ -40,21 +40,24 @@ export default function ChartComponent() {
                     ]
                 },
                 options: {
+                    maintainAspectRatio: false,
                     responsive: true,
                     scales: {
                         y: {
                             ticks: { color: '#777D8B', beginAtZero: false, font: 12 },
                             grid: {
-                                display: false
+                                color:'#F5F6F8',
+
                             },
                             border: {
                                 display: false,
+                                dash: [4,4],
                             },
                         },
                         x: {
                             ticks: { color: '#777D8B', beginAtZero: true, font: 1 },
                             grid: {
-                                display: false
+                                display: false,
                             },
                             border: {
                                 display: false,
@@ -64,11 +67,9 @@ export default function ChartComponent() {
                     },
                     plugins: {
                         legend: {
-
                             display: false
                         }
                     }
-
                 }
             }
         );
