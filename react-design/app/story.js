@@ -73,21 +73,6 @@ export default function Story() {
         },
     ];
 
-    function ShowStory() {
-        for (let i = 2; i < 8; i++) {
-            {
-                isShown[i] && <div className="slideshow" >
-                    <Stories id='story'
-                        onAllStoriesEnd={handleSwitch2}
-                        defaultDuration={20000}
-                        pauseStoryWhenInActiveWindow={true}
-                        width="400px" height="600px"
-                        stories={`stories${i}`} />
-                </div>
-            }
-        }
-    }
-
     return (
         <>
             <div className='d-flex mt-1 justify-content-between'>
@@ -99,15 +84,14 @@ export default function Story() {
                         width="400px" height="600px"
                         stories={stories} />
                 </div>}
-                <ShowStory />
-                {/* {isShown2 && <div className="slideshow" >
+                {isShown2 && <div className="slideshow" >
                     <Stories
                         onAllStoriesEnd={handleSwitch2}
                         defaultDuration={20000}
                         pauseStoryWhenInActiveWindow={true}
                         width="400px" height="600px"
                         stories={stories2} />
-                </div>} */}
+                </div>}
                 <a class="story">
                     <div class="profile">
                         <Image onClick={handleClick} className="img"

@@ -49,7 +49,6 @@ export default function ChartComponent() {
                             ticks: { color: '#777D8B', beginAtZero: false, font: 12 },
                             grid: {
                                 color:'#F5F6F8',
-
                             },
                             border: {
                                 display: false,
