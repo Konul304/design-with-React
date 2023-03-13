@@ -82,6 +82,10 @@ html {
 	border-radius: 10px;
 }
 
+.circleList li{
+	list-style-type: disc;
+}
+
 .noLink:hover {
 	color: white;
 	background-color: #233B82;

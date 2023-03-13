@@ -41,7 +41,7 @@ export default function SideMenu(props) {
             </a>
             </Link>
             <div className="collapse" id="collapseExample1">
-              <ul>
+              <ul className="circleList">
                 <li className="mt-3 mb-3"><Link href="/contracts">Reqresslər</Link></li>
                 <li className="mt-2 mb-3"><a href="#">Sazişlər</a></li>
                 <li className="mt-2"><a href="#">Faktorinq müqaviləsi</a></li>
@@ -62,7 +62,7 @@ export default function SideMenu(props) {
                 Zaminli Portfel <FontAwesomeIcon icon={faCaretDown} className="down2" /></span>
             </a>
             <div className="collapse" id="collapseExample2">
-              <ul>
+              <ul  className="circleList">
                 <li className="mt-3 mb-3"><a href="#">Reqresslər</a></li>
                 <li className="mt-2 mb-3"><a href="#">Sazişlər</a></li>
                 <li className="mt-2"><a href="#">Faktorinq müqaviləsi</a></li>
@@ -83,7 +83,7 @@ export default function SideMenu(props) {
                 Hesabatlar <FontAwesomeIcon icon={faCaretDown} className="down3" /></span>
             </a>
             <div className="collapse" id="collapseExample3">
-              <ul >
+              <ul  className="circleList">
                 <li className="mt-3"><a href="#">Hesabat</a></li>
               </ul>
             </div>
