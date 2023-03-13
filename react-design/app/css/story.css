@@ -12,6 +12,13 @@
     left: 37%;
 }
 
+/* body>* {
+  filter: blur(1.2px);
+} */
+
+/* #story{
+  filter: blur(0px);
+} */
 
 :root {
     --bg-color: white;
@@ -62,7 +69,8 @@
     animation-name: story;
     animation-iteration-count: infinite;
   }
-  
+
+
 /*   
 @keyframes story {
     0% {
