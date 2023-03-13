@@ -6,6 +6,8 @@ export default function ChartComponent() {
         { year: 'Yan', count: 30 },
         { year: 'Fev', count: 20 },
         { year: "Mar", count: 40 },
+        { year: "Apr", count: 20 },
+        { year: "May", count: 40 },
         { year: "İyun", count: 20 },
         { year: "İyul", count: 30 },
         { year: "Avq", count: 50 },
