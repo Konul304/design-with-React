@@ -212,17 +212,18 @@ body{
 }
 
 .active>.page-link {
-    background-color: #233B82;
-    border-color: #233B82;
+    background-color: #233B82 !important;
+    border-color: #233B82 !important;
     box-shadow: none;
+    color: white !important;
 }
 
 .page-link {
     border-radius: 10px;
-    border-color: #F5F5F5;
+    border-color: #F5F5F5 !important;
     width: 36px;
     height: 36px;
     margin: 0px 5px;
-    background-color: #F5F5F5;
-    color: #233B82;
+    background-color: #F5F5F5 !important;
+    color: #233B82 !important;
 }
