@@ -69,7 +69,10 @@ export default function ChartComponent() {
                     plugins: {
                         legend: {
                             display: false
-                        }
+                        },
+                        tooltip: {
+                            enabled: false 
+                          }
                     }
                 }
             }
