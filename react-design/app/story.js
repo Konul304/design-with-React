@@ -11,13 +11,15 @@ export default function Story() {
     const [isShown, setIsShown] = useState(false);
     const [isShown2, setIsShown2] = useState(false);
 
+    const bg = document.getElementById("bg-blur");
+
     const handleClick1 = () => {
         setIsShown(current => !current);
-        document.getElementById('bg-blur').classList.add("blur");
+        bg.classList.add("blur");
     }
     const handleClick2 = () => {
         setIsShown2(current => !current);
-        document.getElementById('bg-blur').classList.add("blur");
+        bg.classList.add("blur");
     }
     
     const handleSwitch1 = () => {
@@ -26,13 +28,13 @@ export default function Story() {
     }
     const handleSwitch2 = () => {
         setIsShown2(false);
-        document.getElementById('bg-blur').classList.remove("blur");
+        bg.classList.remove("blur");
     }
     document.body.addEventListener('click', () => {
         setIsShown(false)
-        document.getElementById('bg-blur').classList.remove("blur");
+        bg.classList.remove("blur");
         setIsShown2(false)
-        document.getElementById('bg-blur').classList.remove("blur");
+        bg.classList.remove("blur");
     })
 
     return (
@@ -44,7 +46,7 @@ export default function Story() {
                         defaultDuration={20000}
                         pauseStoryWhenInActiveWindow={true}
                         width="400px" height="600px"
-                        stories={stories1} />
+                        stories={stories1[0]} />
                 </div>}
                 {isShown2 && <div className="slideshow" >
                     <Stories
@@ -52,11 +54,11 @@ export default function Story() {
                         defaultDuration={20000}
                         pauseStoryWhenInActiveWindow={true}
                         width="400px" height="600px"
-                        stories={stories2} />
+                        stories={stories1[1]} />
                 </div>}
                 <a class="story">
-                    <div class="profile">
-                        <Image onClick={handleClick1} className="img"
+                    <div class="profile" onClick={handleClick1}>
+                        <Image  className="img"
                             src={pic1}
                             alt="Picture of the author"
                         />
