@@ -3,7 +3,7 @@ import "./css/main.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Inter } from '@next/font/google'
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Layout from "./layout1";
 
 const inter = Inter({ subsets: ['latin'] })

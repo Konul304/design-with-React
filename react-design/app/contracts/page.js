@@ -2,7 +2,7 @@
 import "../css/contracts.css"
 import axios from "axios";
 import moment from 'moment';
-import { useState, useEffect, use } from 'react'
+import { useState, useEffect } from 'react'
 import ReactPaginate from "react-paginate"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { config } from '@fortawesome/fontawesome-svg-core'
