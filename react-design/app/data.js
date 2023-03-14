@@ -1,4 +1,4 @@
-export const stories1 = [
+export const stories = [
     [{
         type: 'image',
         url: 'https://images.pexels.com/photos/9470805/pexels-photo-9470805.jpeg?w=300',

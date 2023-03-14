@@ -1,6 +1,5 @@
 import 'stories-react/dist/index.css';
-import {stories1} from './data'
-import {stories2} from './data'
+import {stories} from './data'
 import Image from 'next/image';
 import pic1 from '../public/images/pic1.webp'
 import './css/story.css'
@@ -46,7 +45,7 @@ export default function Story() {
                         defaultDuration={20000}
                         pauseStoryWhenInActiveWindow={true}
                         width="400px" height="600px"
-                        stories={stories1[0]} />
+                        stories={stories[0]} />
                 </div>}
                 {isShown2 && <div className="slideshow" >
                     <Stories
@@ -54,7 +53,7 @@ export default function Story() {
                         defaultDuration={20000}
                         pauseStoryWhenInActiveWindow={true}
                         width="400px" height="600px"
-                        stories={stories1[1]} />
+                        stories={stories[1]} />
                 </div>}
                 <a class="story">
                     <div class="profile" onClick={handleClick1}>
