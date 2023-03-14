@@ -3,6 +3,13 @@ import Navbar from '@/app/Navbar'
 import SideMenu from '@/app/sideMenu'
 
 export default function RootLayout({ children }) {
+  // const router = useRouter()
+  // if(router.pathName=='/homePage'){
+  //   return <Navbar name='Ana səhifə'/>
+  // }
+  // else if(router.pathName=='/contracts'){
+  //   return <Navbar name='Müştəri'/>
+  // }
   return (
     <html lang="en">
       {/*
@@ -11,6 +18,7 @@ export default function RootLayout({ children }) {
       */}
       <head />
       <body>
+        <div id='bg-blur'></div>
         <Navbar />
         <SideMenu />
         <div>{children}</div>

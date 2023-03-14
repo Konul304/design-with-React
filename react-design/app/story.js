@@ -13,9 +13,11 @@ export default function Story() {
 
     const handleClick1 = () => {
         setIsShown(current => !current);
+        document.getElementById('bg-blur').classList.add("blur");
     }
     const handleClick2 = () => {
         setIsShown2(current => !current);
+        document.getElementById('bg-blur').classList.add("blur");
     }
     
     const handleSwitch1 = () => {
@@ -24,10 +26,13 @@ export default function Story() {
     }
     const handleSwitch2 = () => {
         setIsShown2(false);
+        document.getElementById('bg-blur').classList.remove("blur");
     }
     document.body.addEventListener('click', () => {
         setIsShown(false)
+        document.getElementById('bg-blur').classList.remove("blur");
         setIsShown2(false)
+        document.getElementById('bg-blur').classList.remove("blur");
     })
 
     return (
