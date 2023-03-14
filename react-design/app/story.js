@@ -55,64 +55,64 @@ export default function Story() {
                         width="400px" height="600px"
                         stories={stories[1]} />
                 </div>}
-                <a class="story">
-                    <div class="profile" onClick={handleClick1}>
+                <a className="story">
+                    <div className="profile" onClick={handleClick1}>
                         <Image  className="img"
                             src={pic1}
                             alt="Picture of the author"
                         />
                     </div>
                 </a>
-                <a class="story">
-                    <div class="profile">
+                <a className="story">
+                    <div className="profile">
                         <Image onClick={handleClick2}
                             src={pic1}
                             alt="Picture of the author"
                         />
                     </div>
                 </a>
-                <a class="story">
-                    <div class="profile">
+                <a className="story">
+                    <div className="profile">
                         <Image onClick={handleClick1}
                             src={pic1}
                             alt="Picture of the author"
                         />
                     </div>
                 </a>
-                <a class="story">
-                    <div class="profile">
+                <a className="story">
+                    <div className="profile">
                         <Image onClick={handleClick1}
                             src={pic1}
                             alt="Picture of the author"
                         />
                     </div>
                 </a>
-                <a class="story">
-                    <div class="profile">
+                <a className="story">
+                    <div className="profile">
                         <Image onClick={handleClick1}
                             src={pic1}
                             alt="Picture of the author"
                         />
                     </div>
                 </a>
-                <a class="story">
-                    <div class="profile">
+                <a className="story">
+                    <div className="profile">
                         <Image onClick={handleClick1}
                             src={pic1}
                             alt="Picture of the author"
                         />
                     </div>
                 </a>
-                <a class="story">
-                    <div class="profile">
+                <a className="story">
+                    <div className="profile">
                         <Image onClick={handleClick1}
                             src={pic1}
                             alt="Picture of the author"
                         />
                     </div>
                 </a>
-                <a class="story">
-                    <div class="profile">
+                <a className="story">
+                    <div className="profile">
                         <Image onClick={handleClick1}
                             src={pic1}
                             alt="Picture of the author"
