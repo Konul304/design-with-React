@@ -13,26 +13,28 @@ export default function Card() {
                         <small>Yanvar</small>
                     </div>
                     <div className='d-flex'>
-                        <Image className='story me-3'
-                            src={img}
-                            alt="Picture of the author"
-                        />
+                        <div className='d-flex flex-column '>
+                            <Image className='story me-3'
+                                src={img}
+                                alt="Picture of the author"
+                            />
+                            <Image  className='story me-3 second'
+                                src={img}
+                                alt="Picture of the author"
+                            />
+                        </div>
+                        <div className='textDiv'>
                         <div>
                             <span>Gözləmədə</span>
                             <p>8%</p>
                         </div>
-                    </div>
-                    <div className='d-flex mt-3'>
-                        <Image className='story me-3'
-                            src={img}
-                            alt="Picture of the author"
-                        />
+                        <hr></hr>
                         <div>
                             <span>İcra edildi</span>
                             <p>92%</p>
                         </div>
+                        </div>
                     </div>
-                    <div className='d-flex'></div>
                 </div>
                 <div className="card me-3 p-3">
                     <div className="d-flex justify-content-between">
@@ -40,23 +42,26 @@ export default function Card() {
                         <small>Yanvar</small>
                     </div>
                     <div className='d-flex mt-3'>
-                        <Image className='story me-3'
-                            src={img}
-                            alt="Picture of the author"
-                        />
+                        <div className='d-flex flex-column '>
+                            <Image className='story me-3'
+                                src={img}
+                                alt="Picture of the author"
+                            />
+                            <Image  className='story me-3  second'
+                                src={img}
+                                alt="Picture of the author"
+                            />
+                        </div>
+                        <div className='textDiv'>
                         <div>
                             <span>Gözləmədə</span>
                             <p>46%</p>
                         </div>
-                    </div>
-                    <div className='d-flex mt-3'>
-                        <Image className='story me-3'
-                            src={img}
-                            alt="Picture of the author"
-                        />
+                        <hr></hr>
                         <div>
                             <span>İcra edildi</span>
                             <p>54%</p>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -66,23 +71,26 @@ export default function Card() {
                         <small>Yanvar</small>
                     </div>
                     <div className='d-flex mt-3'>
+                        <div className='d-flex flex-column '>
                         <Image className='story me-3'
                             src={img2}
                             alt="Picture of the author"
                         />
+                            <Image  className='story me-3 second'
+                                src={img}
+                                alt="Picture of the author"
+                            />
+                        </div>
+                        <div className='textDiv'>
                         <div>
                             <span>Gecikməli</span>
                             <p>20%</p>
                         </div>
-                    </div>
-                    <div className='d-flex mt-3'>
-                        <Image className='story me-3'
-                            src={img}
-                            alt="Picture of the author"
-                        />
+                        <hr></hr>
                         <div>
                             <span>Ödəyir</span>
                             <p>80%</p>
+                        </div>
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 .card{
     width: 32%;
-    height: 192px;
+    height: 196px;
     border: none;
     border-radius: 10px;
 }
@@ -17,4 +17,16 @@
 
 .card p{
     font-weight: bold;
+}
+
+.second{
+    margin-top:32px;
+}
+
+.textDiv{
+    width: 70%;
+}
+
+hr{
+    color: #caccd1;
 }
