@@ -106,7 +106,7 @@ input[type="search"]:focus {
 }
 
 .table {
-    width: 98%;
+    width: 98% !important;
     margin-left: 1%;
     background-color: white;
 }
