@@ -76,6 +76,7 @@ html {
 }
 
 .noLink {
+	display: block;
 	color: black;
 	text-decoration: none;
 	padding: 15px;
@@ -139,4 +140,9 @@ html {
 	left: 8%;
 	z-index: 2;
 	transform: rotate(25deg);
+}
+
+.focused:focus{
+	color: white;
+	background-color: #233B82;
 }

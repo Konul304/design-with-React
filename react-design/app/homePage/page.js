@@ -24,7 +24,7 @@ export default function HomePage() {
         <>
             <div className='d-flex justify-content-start container'>
                 <div className="container1">
-                    <h5 className='mt-3'>Yeniliklər</h5>
+                    <h5 className='mt-3'><b>Yeniliklər</b></h5>
                     <div className='storyDiv mb-3 mt-2'>
                         <Story/>
                     </div>
