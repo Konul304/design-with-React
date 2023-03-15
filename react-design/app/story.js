@@ -14,11 +14,11 @@ export default function Story() {
 
     const handleClick1 = () => {
         setIsShown(current => !current);
-        // bg.classList.add("blur");
+        bg.classList.add("blur");
     }
     const handleClick2 = () => {
         setIsShown2(current => !current);
-        // bg.classList.add("blur");
+        bg.classList.add("blur");
     }
     
     const handleSwitch1 = () => {
@@ -27,13 +27,13 @@ export default function Story() {
     }
     const handleSwitch2 = () => {
         setIsShown2(false);
-        // bg.classList.remove("blur");
+        bg.classList.remove("blur");
     }
     document.body.addEventListener('click', () => {
         setIsShown(false)
-        // bg.classList.remove("blur");
+        bg.classList.remove("blur");
         setIsShown2(false)
-        // bg.classList.remove("blur");
+        bg.classList.remove("blur");
     })
 
     return (
