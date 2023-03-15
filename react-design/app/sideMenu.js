@@ -21,13 +21,13 @@ export default function SideMenu(props) {
             width="146px"
             height="32px"
           />
-          <Link className="hoverable" href="/homePage"><li className="noLink">
-            <FontAwesomeIcon icon={faSquarePollVertical} className="me-3" />
-            <span >Ana səhifə </span>
-          </li></Link>
+          <Link href="#" activeClassName="active"><div><a href="#" className="noLink focused">
+            <FontAwesomeIcon icon={faSquarePollVertical} className="me-3"/>
+            <span>Ana səhifə </span>
+          </a></div></Link>
           <li className="Item">
             <Link href='/contracts' legacyBehavior><a
-              className="collapsed pb-3 hoverable"
+              className="collapsed pb-3 hoverable focused"
               data-bs-toggle="collapse"
               href="#collapseExample1"
               role="button"
@@ -50,7 +50,7 @@ export default function SideMenu(props) {
           </li>
           <li className="Item">
             <a
-              className="collapsed pb-3 hoverable"
+              className="collapsed pb-3 hoverable focused"
               data-bs-toggle="collapse"
               href="#collapseExample2"
               role="button"
@@ -71,7 +71,7 @@ export default function SideMenu(props) {
           </li>
           <li className="Item">
             <a
-              className="collapsed pb-3 hoverable"
+              className="collapsed pb-3 hoverable focused"
               data-bs-toggle="collapse"
               href="#collapseExample3"
               role="button"
@@ -88,8 +88,8 @@ export default function SideMenu(props) {
               </ul>
             </div>
           </li>
-          <a href="#"><li className="noLink">
-            <FontAwesomeIcon icon={faCube} className="me-3" />
+          <a href="#"><li className="noLink focused">
+            <FontAwesomeIcon icon={faCube} className="me-3 " />
             Problemli məhsullar
           </li></a>
         </ul>

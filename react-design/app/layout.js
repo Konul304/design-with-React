@@ -1,6 +1,7 @@
 import './globals.css'
 import Navbar from '@/app/Navbar'
 import SideMenu from '@/app/sideMenu'
+import HomePage from './homePage/page'
 
 export default function RootLayout({ children }) {
   return (
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
         <div id='bg-blur'></div>
         <Navbar/>
         <SideMenu />
+        <HomePage/>
         <div>{children}</div>
       </body>
     </html>
