@@ -6,3 +6,12 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
+
+// module.exports = Object.assign({}, nextConfig, {
+//   experimental: {
+//     incomimgCss: true
+//   },
+//   serverRuntimeConfig: {
+//     disableServerSideRender: true,
+//   },
+// });
