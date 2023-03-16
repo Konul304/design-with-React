@@ -1,8 +1,10 @@
 import Chart from 'chart.js/auto';
+import { useEffect } from 'react';
 import './css/chart.css'
 
 export default function ChartComponent() {
-    const data = [
+    useEffect(()=>{
+        const data = [
         { year: 'Yan', count: 30 },
         { year: 'Fev', count: 20 },
         { year: "Mar", count: 40 },
@@ -78,6 +80,8 @@ export default function ChartComponent() {
             }
         );
     })()
+    },[])
+    
 
     return (
         <>
