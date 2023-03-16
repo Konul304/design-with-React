@@ -10,7 +10,7 @@ config.autoAddCss = false
 import { faCaretDown, faSquarePollVertical, faIdBadge, faChartSimple, faFileContract, faCube } from '@fortawesome/free-solid-svg-icons'
 import Link from "next/link"
 
-export default function SideMenu(props) {
+export default function SideMenu() {
   return (
     <>
       <div className="sidebar">
@@ -21,7 +21,7 @@ export default function SideMenu(props) {
             width="146px"
             height="32px"
           />
-          <Link href="#" activeClassName="active"><div><a href="#" className="noLink focused">
+          <Link href="#"><div><a href="#" className="noLink focused">
             <FontAwesomeIcon icon={faSquarePollVertical} className="me-3"/>
             <span>Ana səhifə </span>
           </a></div></Link>
