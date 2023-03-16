@@ -1,6 +1,6 @@
 import Chart from 'chart.js/auto';
 import { useEffect } from 'react';
-import './css/chart.css'
+import '../css/chart.css'
 
 export default function ChartComponent() {
     useEffect(()=>{

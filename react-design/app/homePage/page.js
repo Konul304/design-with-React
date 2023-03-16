@@ -14,9 +14,9 @@ import web from '../../public/images/web.svg'
 import phone from '../../public/images/phone.svg'
 import mail from '../../public/images/mail.svg'
 import cfLogo from '../../public/images/cfLogo.svg'
-import Card from '../cards';
-import ChartComponent from '../chart';
-import Story from '../story';
+import Card from '../components/cards';
+import ChartComponent from '../components/chart';
+import Story from '../components/story';
 
 export default function HomePage() {
    

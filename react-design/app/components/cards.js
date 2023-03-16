@@ -1,7 +1,7 @@
-import './css/cards.css'
+import '../css/cards.css'
 import Image from 'next/image'
-import img from '../public/images/cardImg.svg'
-import img2 from '../public/images/cardImg2.svg'
+import img from '../../public/images/cardImg.svg'
+import img2 from '../../public/images/cardImg2.svg'
 
 export default function Card() {
     return (

@@ -1,6 +1,6 @@
 import './globals.css'
-import Navbar from '@/app/Navbar'
-import SideMenu from '@/app/sideMenu'
+import Navbar from '@/app/components/Navbar.js'
+import SideMenu from '@/app/components/sideMenu'
 
 export default function RootLayout({ children }) {
   return (
