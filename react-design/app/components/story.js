@@ -1,7 +1,7 @@
 import 'stories-react/dist/index.css';
 import '../css/story.css'
 import { stories } from './data'
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import Stories from 'stories-react';
 import Image from 'next/image';
 import pic1 from '../../public/images/pic1.webp'
@@ -10,16 +10,11 @@ export default function Story() {
     const [shownIndex, setShownIndex] = useState(-1);
     const bgRef = useRef(null);
 
-    useEffect(() => {
-        const handleClick = () => {
-            setShownIndex(-1);
-            bgRef.current.classList.remove('blur');
-        };
-        document.body.addEventListener('click', handleClick);
-        return () => {
-            document.body.removeEventListener('click', handleClick);
-        };
-    }, []);
+    const handleClick = () => {
+        setShownIndex(-1);
+        bgRef.current.classList.remove('blur');
+    };
+    document.body.addEventListener('click', handleClick);
 
     const handlePictureClick = (index) => {
         setShownIndex(index);
@@ -36,16 +31,19 @@ export default function Story() {
         { src: pic1 },
         { src: pic1 },
     ];
-
     return (
         <>
             <div id="storyFlex" className="d-flex mt-1 justify-content-between">
-                {shownIndex >= 0 && (
+                {(shownIndex >= 0) && (
                     <div className="slideshow" id="story">
                         <Stories
+                            key={shownIndex}
                             onAllStoriesEnd={() => {
-                                setShownIndex(-1)
-                                bgRef.current.classList.remove('blur');
+                                if (shownIndex === 7) {
+                                    handleClick()
+                                } else {
+                                    setShownIndex((current) => current + 1);
+                                }
                             }}
                             defaultDuration={20000}
                             pauseStoryWhenInActiveWindow={true}
