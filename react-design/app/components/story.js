@@ -9,6 +9,7 @@ import pic1 from '../../public/images/pic1.webp'
 export default function Story() {
     const [shownIndex, setShownIndex] = useState(-1);
     const bgRef = useRef(null);
+    const borderRef=useRef(null);
 
     const handleClick = () => {
         setShownIndex(-1);
@@ -55,7 +56,7 @@ export default function Story() {
                 )}
                 {pictures.map((picture, i) => (
                     <a className="story" key={i}>
-                        <div className="profile" onClick={() => handlePictureClick(i)}>
+                        <div className={`profile${shownIndex === i ? ' activeStory' : ''}`} ref={borderRef} onClick={() => handlePictureClick(i)}>
                             <Image className="img" src={picture.src} alt="Picture of the author" />
                         </div>
                     </a>
