@@ -16,7 +16,7 @@ export default function Navbar() {
         <>
             <div>
                 <nav className="navbar d-flex">
-                    <h5 className="heading5"><b>Müştəri</b></h5>
+                    <h5 className="heading5"><b>Ana səhifə</b></h5>
                     <div className='d-flex '>
                         <button className='btn btn1'>
                             <Image className="mt-2 mb-3"
