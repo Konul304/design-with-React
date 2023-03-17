@@ -11,7 +11,6 @@ export default function RootLayout({ children }) {
       */}
       <head />
       <body>
-        <div id='bg-blur'></div>
         <Navbar/>
         <SideMenu />
         <div>{children}</div>
