@@ -1,7 +1,7 @@
 import 'stories-react/dist/index.css';
 import '../css/story.css'
 import { stories } from './data'
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import Stories from 'stories-react';
 import Image from 'next/image';
 import pic1 from '../../public/images/pic1.webp'
